@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>İSKET GROUP — Выход поставщиков в федеральные торговые сети</title>
+  <meta name="description" content="İSKET GROUP сопровождает поставщиков при подготовке к работе с X5 Group, Пятёрочкой, Перекрёстком, Чижиком и другими федеральными торговыми сетями. Услуги, цены, кейсы и сопровождение под ключ.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="İSKET GROUP — Сопровождение поставщиков в федеральные сети">
+  <meta property="og:description" content="Аудит компании, подготовка документов, сопровождение договора, претензионная работа и комплексный запуск поставщика.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#0f5132;
+      --green-2:#16834b;
+      --green-soft:#edf7f1;
+      --red:#d92d20;
+      --red-dark:#b42318;
+      --text:#1f2a24;
+      --muted:#66756d;
+      --bg:#f7faf8;
+      --white:#ffffff;
+      --line:#e4ece7;
+      --shadow:0 18px 50px rgba(15,56,34,.08);
+      --radius:20px;
+      --radius-sm:14px;
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:0 auto;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:var(--green-soft);
+      color:var(--green-2);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--green-2);
+    }
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin-bottom:38px;
+    }
+
+    .section-head.center{
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .section h2{
+      margin-top:14px;
+      font-size:clamp(32px,4vw,52px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+      color:#0e2f20;
+    }
+
+    .section-head p{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:48px;
+      padding:0 20px;
+      border:none;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:var(--red);
+      box-shadow:0 10px 30px rgba(217,45,32,.18);
+    }
+
+    .btn-primary:hover{
+      background:var(--red-dark);
+    }
+
+    .btn-secondary{
+      color:var(--green);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .btn-green{
+      color:#fff;
+      background:var(--green-2);
+    }
+
+    .btn-green:hover{
+      background:#116a3d;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(14px);
+    }
+
+    .nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+      font-weight:800;
+      letter-spacing:.02em;
+      color:#111;
+    }
+
+    .logo-mark{
+      width:36px;
+      height:36px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:4px;
+      align-items:end;
+    }
+
+    .logo-mark span{
+      display:block;
+      background:#111;
+      border-radius:2px 2px 0 0;
+    }
+
+    .logo-mark span:nth-child(1){height:55%;opacity:.45;}
+    .logo-mark span:nth-child(2){height:100%;}
+    .logo-mark span:nth-child(3){height:72%;opacity:.45;}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      color:#31433a;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .mini-link{
+      font-size:14px;
+      font-weight:800;
+      color:var(--green);
+      white-space:nowrap;
+    }
+
+    .hero{
+      padding:92px 0 56px;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(22,131,75,.10), transparent 28%),
+        radial-gradient(circle at 85% 25%, rgba(217,45,32,.07), transparent 25%),
+        linear-gradient(180deg,#fbfdfc 0%,#f4f8f6 100%);
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:54px;
+      align-items:center;
+    }
+
+    .hero h1{
+      margin-top:18px;
+      max-width:820px;
+      font-size:clamp(42px,6.3vw,76px);
+      line-height:.98;
+      letter-spacing:-.055em;
+      color:#0b2f1e;
+    }
+
+    .hero h1 span{
+      color:var(--red);
+    }
+
+    .hero .lead{
+      max-width:760px;
+      margin-top:24px;
+      color:#4d6157;
+      font-size:19px;
+    }
+
+    .network-line{
+      margin-top:18px;
+      color:#33483e;
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
+    }
+
+    .hero-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h3{
+      color:#103522;
+      font-size:24px;
+      line-height:1.2;
+      margin-bottom:18px;
+    }
+
+    .quick-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .quick-item{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      padding:14px 0;
+      border-top:1px solid var(--line);
+    }
+
+    .quick-item:first-child{
+      border-top:none;
+      padding-top:0;
+    }
+
+    .quick-item strong{
+      display:block;
+      font-size:14px;
+      color:#183a28;
+    }
+
+    .quick-item small{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+    }
+
+    .quick-price{
+      font-weight:800;
+      color:var(--red);
+      white-space:nowrap;
+    }
+
+    .trust{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .trust-item{
+      padding:20px;
+      text-align:center;
+      border-right:1px solid var(--line);
+    }
+
+    .trust-item:last-child{
+      border-right:none;
+    }
+
+    .trust-num{
+      font-size:28px;
+      font-weight:800;
+      color:#0f3822;
+    }
+
+    .trust-label{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .service-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      padding:26px;
+      transition:.25s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .service-card.featured{
+      border:2px solid #cce8d7;
+      background:linear-gradient(180deg,#ffffff 0%,#f5fbf7 100%);
+    }
+
+    .service-tag{
+      display:inline-flex;
+      align-self:flex-start;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#eef6f1;
+      color:var(--green-2);
+      font-size:11px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+
+    .service-card h3{
+      margin-top:16px;
+      font-size:22px;
+      line-height:1.2;
+      color:#0e3320;
+    }
+
+    .service-card p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .service-price{
+      margin-top:22px;
+      font-size:28px;
+      font-weight:800;
+      color:#122e20;
+    }
+
+    .service-price span{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .checklist{
+      list-style:none;
+      display:grid;
+      gap:9px;
+      margin:20px 0 24px;
+      color:#43574d;
+      font-size:14px;
+    }
+
+    .checklist li{
+      position:relative;
+      padding-left:22px;
+    }
+
+    .checklist li::before{
+      content:'✓';
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--green-2);
+      font-weight:900;
+    }
+
+    .service-card .btn{
+      margin-top:auto;
+      width:100%;
+    }
+
+    .all-in{
+      background:#0e3320;
+      color:#fff;
+    }
+
+    .all-in .section-head h2,
+    .all-in .section-head p{
+      color:#fff;
+    }
+
+    .all-in .section-head p{
+      opacity:.78;
+    }
+
+    .allin-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:44px;
+      align-items:start;
+    }
+
+    .allin-card{
+      background:#fff;
+      color:var(--text);
+      border-radius:22px;
+      padding:30px;
+    }
+
+    .allin-card h3{
+      font-size:28px;
+      color:#0d3120;
+      line-height:1.15;
+    }
+
+    .allin-card p{
+      margin-top:12px;
+      color:var(--muted);
+    }
+
+    .allin-price{
+      margin:24px 0;
+      padding:18px;
+      border-radius:14px;
+      background:#f3f8f5;
+    }
+
+    .allin-price small{
+      display:block;
+      color:var(--muted);
+    }
+
+    .allin-price strong{
+      display:block;
+      margin-top:4px;
+      font-size:24px;
+      color:#0e3320;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .step{
+      padding:18px;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .step-num{
+      font-size:12px;
+      font-weight:800;
+      color:#9edab7;
+    }
+
+    .step h4{
+      margin-top:6px;
+      font-size:16px;
+    }
+
+    .step p{
+      margin-top:5px;
+      color:rgba(255,255,255,.72);
+      font-size:13px;
+    }
+
+    .cases{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .case{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+    }
+
+    .case small{
+      color:var(--red);
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .case h3{
+      margin-top:10px;
+      font-size:24px;
+      color:#123321;
+    }
+
+    .case-block{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:#f5f8f6;
+    }
+
+    .case-block strong{
+      display:block;
+      margin-bottom:5px;
+      color:#153724;
+    }
+
+    .case-result{
+      margin-top:12px;
+      padding:16px;
+      border-radius:12px;
+      background:#eaf6ef;
+      color:#133923;
+      font-weight:700;
+    }
+
+    .why{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .why-card{
+      padding:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+
+    .why-icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:var(--green-soft);
+      font-size:20px;
+    }
+
+    .why-card h3{
+      margin-top:14px;
+      color:#123321;
+      font-size:19px;
+    }
+
+    .why-card p{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .contact{
+      background:linear-gradient(135deg,#eaf5ef,#dfeee5);
+      border-top:1px solid var(--line);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:36px;
+      align-items:start;
+    }
+
+    .contact-copy h2{
+      margin-top:14px;
+    }
+
+    .contact-copy p{
+      margin-top:14px;
+      color:#566b60;
+      font-size:16px;
+    }
+
+    .contact-box{
+      margin-top:24px;
+      display:grid;
+      gap:10px;
+      font-size:14px;
+      color:#254334;
+    }
+
+    form{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .field{
+      margin-bottom:14px;
+    }
+
+    .field label{
+      display:block;
+      margin-bottom:6px;
+      font-size:13px;
+      font-weight:700;
+      color:#283d32;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      padding:12px 13px;
+      border:1px solid #dbe5df;
+      border-radius:10px;
+      outline:none;
+      background:#fff;
+    }
+
+    .field textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      border-color:#78b893;
+      box-shadow:0 0 0 3px rgba(22,131,75,.10);
+    }
+
+    .form-note{
+      margin-top:12px;
+      color:#7a8a82;
+      font-size:12px;
+      text-align:center;
+    }
+
+    footer{
+      background:#fff;
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:#6f7f77;
+      font-size:13px;
+    }
+
+    .footer-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .floating-wa{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:90;
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#25d366;
+      color:#fff;
+      font-size:24px;
+      box-shadow:0 12px 30px rgba(37,211,102,.28);
+    }
+
+    @media (max-width:980px){
+      .nav-links{
+        display:none;
+      }
+
+      .hero-grid,
+      .allin-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .services{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:680px){
+      .section{
+        padding:66px 0;
+      }
+
+      .nav{
+        min-height:64px;
+      }
+
+      .mini-link{
+        display:none;
+      }
+
+      .hero{
+        padding-top:68px;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .services,
+      .cases,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .trust{
+        grid-template-columns:1fr;
+      }
+
+      .trust-item{
+        border-right:none;
+        border-bottom:1px solid var(--line);
+      }
+
+      .trust-item:last-child{
+        border-bottom:none;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .nav-actions .btn{
+        padding:0 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand">
+        <div class="logo-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span>İSKET GROUP</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#services">Услуги и цены</a>
+        <a href="#allin">Под ключ</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="mini-link" href="https://wa.me/905306610835" target="_blank" rel="noopener">
+          +90 530 661 08 35
+        </a>
+        <a class="btn btn-primary" href="#contact">Получить расчёт</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+
+          <div>
+            <span class="eyebrow"><span class="dot"></span> сопровождение поставщиков</span>
+
+            <h1>Выводим поставщиков в <span>федеральные торговые сети</span></h1>
+
+            <p class="lead">
+              Проверяем компанию и документы, готовим поставщика к требованиям сети,
+              сопровождаем договор и помогаем пройти путь до начала работы.
+            </p>
+
+            <div class="network-line">
+              X5 Group · Пятёрочка · Перекрёсток · Чижик · Магнит / АО «Тандер»
+            </div>
+
+            <div class="hero-actions">
+              <a href="#services" class="btn btn-primary">Посмотреть услуги и цены</a>
+              <a href="#allin" class="btn btn-secondary">Сопровождение под ключ</a>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <h3>С чего начинается стоимость</h3>
+
+            <div class="quick-list">
+              <div class="quick-item">
+                <div>
+                  <strong>Чижик</strong>
+                  <small>сопровождение выхода в сеть</small>
+                </div>
+                <div class="quick-price">от 500 000 ₽</div>
+              </div>
+
+              <div class="quick-item">
+                <div>
+                  <strong>Перекрёсток</strong>
+                  <small>сопровождение выхода в сеть</small>
+                </div>
+                <div class="quick-price">от 600 000 ₽</div>
+              </div>
+
+              <div class="quick-item">
+                <div>
+                  <strong>Пятёрочка</strong>
+                  <small>сопровождение выхода в сеть</small>
+                </div>
+                <div class="quick-price">от 750 000 ₽</div>
+              </div>
+
+              <div class="quick-item">
+                <div>
+                  <strong>Документы производителя</strong>
+                  <small>экспертный пакет</small>
+                </div>
+                <div class="quick-price">250 000 ₽</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <div class="trust-num">65+</div>
+            <div class="trust-label">проектов аккредитации</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">6 лет</div>
+            <div class="trust-label">практики и экспертизы</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-num">B2B</div>
+            <div class="trust-label">работа по официальному договору</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="wrap">
+
+        <div class="section-head">
+          <span class="eyebrow"><span class="dot"></span> услуги</span>
+          <h2>Выберите задачу и сразу увидите ориентир по стоимости</h2>
+          <p>
+            Без длинных презентаций и скрытых условий. Сначала понимаем вашу задачу,
+            затем определяем объём сопровождения и фиксируем его в договоре.
+          </p>
+        </div>
+
+        <div class="services">
+
+          <article class="service-card featured">
+            <span class="service-tag">X5 Group</span>
+            <h3>Выход в Чижик</h3>
+            <p>Подготовка поставщика к заключению договора и работе с сетью.</p>
+            <div class="service-price">от 500 000 ₽</div>
+            <ul class="checklist">
+              <li>аудит компании</li>
+              <li>проверка документации</li>
+              <li>подготовка к комплаенсу</li>
+              <li>сопровождение договора</li>
+            </ul>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Чижик">Получить расчёт</a>
+          </article>
+
+          <article class="service-card featured">
+            <span class="service-tag">X5 Group</span>
+            <h3>Выход в Перекрёсток</h3>
+            <p>Сопровождение поставщика по ключевым этапам подготовки и запуска.</p>
+            <div class="service-price">от 600 000 ₽</div>
+            <ul class="checklist">
+              <li>предварительный аудит</li>
+              <li>документы и регламенты</li>
+              <li>подготовка к проверкам</li>
+              <li>сопровождение запуска</li>
+            </ul>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Перекрёсток">Получить расчёт</a>
+          </article>
+
+          <article class="service-card featured">
+            <span class="service-tag">X5 Group</span>
+            <h3>Выход в Пятёрочку</h3>
+            <p>Комплексная подготовка поставщика к работе с федеральной сетью.</p>
+            <div class="service-price">от 750 000 ₽</div>
+            <ul class="checklist">
+              <li>аудит компании</li>
+              <li>подготовка полного пакета</li>
+              <li>подготовка к аудиту</li>
+              <li>сопровождение договора</li>
+            </ul>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Пятёрочку">Получить расчёт</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-tag">Экспертный отдел</span>
+            <h3>Документы производителя</h3>
+            <p>
+              Подготовка юридического и технического пакета документов под требования торговой сети.
+            </p>
+            <div class="service-price">250 000 ₽</div>
+            <ul class="checklist">
+              <li>анализ текущих документов</li>
+              <li>формирование недостающего пакета</li>
+              <li>подготовка под требования сети</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-service="Документы производителя">Оставить заявку</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-tag">Юридический отдел</span>
+            <h3>Штрафы и претензии</h3>
+            <p>
+              Претензии, акты разногласий, официальные обращения и сопровождение споров с сетью.
+            </p>
+            <div class="service-price">индивидуально <span>по задаче</span></div>
+            <ul class="checklist">
+              <li>SL / SLT и недопоставки</li>
+              <li>логистические споры</li>
+              <li>официальная переписка</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-service="Штрафы и претензии">Описать ситуацию</a>
+          </article>
+
+          <article class="service-card">
+            <span class="service-tag">Менеджмент</span>
+            <h3>KAM и специалисты</h3>
+            <p>
+              Подбор профильных специалистов и менеджеров для работы с федеральными торговыми сетями.
+            </p>
+            <div class="service-price">по запросу</div>
+            <ul class="checklist">
+              <li>менеджеры продаж</li>
+              <li>специалисты по работе с сетью</li>
+              <li>точечное усиление команды</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" data-service="KAM и специалисты">Обсудить задачу</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section all-in" id="allin">
+      <div class="wrap">
+        <div class="allin-grid">
+
+          <div>
+            <div class="section-head">
+              <span class="eyebrow"><span class="dot"></span> комплексное сопровождение</span>
+              <h2>Не отдельная услуга, а весь путь поставщика под ключ</h2>
+              <p>
+                Подходит компаниям, которым нужен не один документ или консультация,
+                а последовательное сопровождение до рабочего результата.
+              </p>
+            </div>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-num">01</div>
+                <h4>Аудит компании</h4>
+                <p>Оцениваем текущий статус, структуру и готовность поставщика.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">02</div>
+                <h4>Документация</h4>
+                <p>Проверяем и формируем необходимый пакет документов.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">03</div>
+                <h4>Комплаенс</h4>
+                <p>Готовим компанию к проверкам и требованиям сети.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">04</div>
+                <h4>Коммерческая часть</h4>
+                <p>Помогаем структурировать предложение поставщика.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">05</div>
+                <h4>Договор</h4>
+                <p>Сопровождаем согласование и документооборот.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">06</div>
+                <h4>Запуск</h4>
+                <p>Помогаем пройти финальные организационные этапы.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="allin-card">
+            <h3>Комплексный выход в X5 Group</h3>
+            <p>
+              Сначала проводим диагностику ситуации. После этого формируем
+              понятный перечень работ, стоимость и план сопровождения.
+            </p>
+
+            <div class="allin-price">
+              <small>Стоимость</small>
+              <strong>рассчитывается индивидуально</strong>
+            </div>
+
+            <ul class="checklist">
+              <li>единый проект вместо набора разрозненных услуг</li>
+              <li>одна команда сопровождает все этапы</li>
+              <li>понятная последовательность действий</li>
+              <li>фиксация объёма работ в договоре</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary" data-service="Комплексное сопровождение под ключ">
+              Получить расчёт проекта
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="wrap">
+
+        <div class="section-head center">
+          <span class="eyebrow"><span class="dot"></span> практика</span>
+          <h2>Не рассказываем абстрактно — показываем решённые задачи</h2>
+          <p>Кейсы представлены без раскрытия конфиденциальной информации клиентов.</p>
+        </div>
+
+        <div class="cases">
+
+          <article class="case">
+            <small>Кейс №1</small>
+            <h3>Досрочный доступ к торгам в Пятёрочке</h3>
+
+            <div class="case-block">
+              <strong>Задача</strong>
+              Поставщик уже работал с Перекрёстком и хотел быстрее выйти в торги Пятёрочки,
+              не теряя время на длительное ожидание.
+            </div>
+
+            <div class="case-block">
+              <strong>Что сделали</strong>
+              Провели аудит производства, подготовили экспертное обоснование и официальный пакет документов.
+            </div>
+
+            <div class="case-result">
+              Результат: поставщику открыли досрочный доступ к торгам.
+            </div>
+          </article>
+
+          <article class="case">
+            <small>Кейс №2</small>
+            <h3>Новый поставщик → договор и запуск</h3>
+
+            <div class="case-block">
+              <strong>Задача</strong>
+              Компания не имела опыта прохождения комплаенс-аудита и полного пакета документов под требования сети.
+            </div>
+
+            <div class="case-block">
+              <strong>Что сделали</strong>
+              Аудит, документация, коммерческое предложение, подготовка предприятия и сопровождение проверки.
+            </div>
+
+            <div class="case-result">
+              Результат: договор заключён, поставщику открыт доступ к торгам в целевом регионе.
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+
+        <div class="section-head center">
+          <span class="eyebrow"><span class="dot"></span> почему İSKET GROUP</span>
+          <h2>Сильная экспертиза без лишней публичности и громких обещаний</h2>
+        </div>
+
+        <div class="why">
+          <div class="why-card">
+            <div class="why-icon">✓</div>
+            <h3>Понимаем регламенты ритейла</h3>
+            <p>Работаем с задачами поставщиков, где важны документы, процесс и соответствие требованиям сети.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">§</div>
+            <h3>Работаем в правовом поле</h3>
+            <p>Услуги оформляются официально, объём работ и порядок взаимодействия фиксируются договором.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-icon">→</div>
+            <h3>Не бросаем после консультации</h3>
+            <p>При комплексном сопровождении ведём проект последовательно по согласованному плану.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="contact-grid">
+
+          <div class="contact-copy">
+            <span class="eyebrow"><span class="dot"></span> заявка</span>
+            <h2>Расскажите, какая задача стоит перед вашей компанией</h2>
+            <p>
+              Мы посмотрим вводные и подскажем, какой формат работы подходит:
+              отдельная услуга или комплексное сопровождение.
+            </p>
+
+            <div class="contact-box">
+              <div><strong>WhatsApp:</strong> +90 530 661 08 35</div>
+              <div><strong>Email:</strong> isket.group@bk.ru</div>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/mkjgeynq" method="POST">
+            <input type="hidden" name="form_type" value="Новый продающий лендинг İSKET GROUP">
+
+            <div class="field">
+              <label for="name">Ваше имя *</label>
+              <input id="name" name="name" type="text" required placeholder="Иван">
+            </div>
+
+            <div class="field">
+              <label for="phone">Телефон / WhatsApp *</label>
+              <input id="phone" name="phone" type="tel" required placeholder="+7 999 000-00-00">
+            </div>
+
+            <div class="field">
+              <label for="service">Что вас интересует? *</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Выберите услугу</option>
+                <option>Выход в Чижик</option>
+                <option>Выход в Перекрёсток</option>
+                <option>Выход в Пятёрочку</option>
+                <option>Документы производителя</option>
+                <option>Штрафы и претензии</option>
+                <option>KAM и специалисты</option>
+                <option>Комплексное сопровождение под ключ</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="company">Компания</label>
+              <input id="company" name="company" type="text" placeholder="ООО «Компания»">
+            </div>
+
+            <div class="field">
+              <label for="message">Коротко опишите задачу</label>
+              <textarea id="message" name="message" placeholder="Например: хотим выйти в Пятёрочку как производитель овощей..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              Отправить заявку
+            </button>
+
+            <div class="form-note">
+              Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>© 2026 İSKET GROUP</div>
+      <div>Сопровождение поставщиков и B2B-консалтинг</div>
+    </div>
+  </footer>
+
+  <a class="floating-wa"
+     href="https://wa.me/905306610835"
+     target="_blank"
+     rel="noopener"
+     aria-label="Написать в WhatsApp">💬</a>
+
+  <script>
+    document.querySelectorAll('[data-service]').forEach(function(button){
+      button.addEventListener('click', function(){
+        var value = button.getAttribute('data-service');
+        var select = document.getElementById('service');
+
+        if(!select || !value) return;
+
+        Array.from(select.options).forEach(function(option){
+          if(option.text.trim() === value.trim()){
+            select.value = option.value || option.text;
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
