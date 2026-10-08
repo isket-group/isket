@@ -170,110 +170,245 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(255,255,255,.94);
-      border-bottom:1px solid var(--line);
-      backdrop-filter:blur(14px);
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(15,81,50,.10);
+      backdrop-filter:blur(18px);
+      box-shadow:0 6px 24px rgba(15,56,34,.035);
     }
 
     .nav{
-      min-height:72px;
+      min-height:78px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
+      gap:26px;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:11px;
-      font-weight:800;
-      letter-spacing:.02em;
+      gap:12px;
       color:#111;
+      flex:0 0 auto;
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+
+    .brand-name{
+      font-size:15px;
+      font-weight:800;
+      letter-spacing:.055em;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:#7a8981;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
     }
 
     .logo-mark{
-      width:36px;
-      height:36px;
+      width:37px;
+      height:37px;
+      padding:7px 6px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:4px;
+      gap:3px;
       align-items:end;
+      border:1px solid #dfe8e3;
+      border-radius:10px;
+      background:#fff;
+      box-shadow:0 7px 18px rgba(15,56,34,.06);
     }
 
     .logo-mark span{
       display:block;
-      background:#111;
-      border-radius:2px 2px 0 0;
+      background:#122d20;
+      border-radius:2px 2px 1px 1px;
     }
 
-    .logo-mark span:nth-child(1){height:55%;opacity:.45;}
+    .logo-mark span:nth-child(1){height:56%;opacity:.45;}
     .logo-mark span:nth-child(2){height:100%;}
-    .logo-mark span:nth-child(3){height:72%;opacity:.45;}
+    .logo-mark span:nth-child(3){height:76%;opacity:.7;}
 
     .nav-links{
       display:flex;
       align-items:center;
-      gap:24px;
-      color:#31433a;
-      font-size:14px;
+      gap:28px;
+      color:#47584f;
+      font-size:13px;
       font-weight:700;
+    }
+
+    .nav-links a{
+      position:relative;
+      padding:29px 0 27px;
+      transition:color .2s ease;
+    }
+
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:20px;
+      height:2px;
+      border-radius:2px;
+      background:var(--green-2);
+      transform:scaleX(0);
+      transition:transform .2s ease;
+    }
+
+    .nav-links a:hover{
+      color:#113824;
+    }
+
+    .nav-links a:hover::after{
+      transform:scaleX(1);
     }
 
     .nav-actions{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:12px;
+      flex:0 0 auto;
     }
 
     .mini-link{
-      font-size:14px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      font-size:13px;
       font-weight:800;
       color:var(--green);
       white-space:nowrap;
+      line-height:1.15;
+    }
+
+    .mini-link small{
+      margin-bottom:3px;
+      color:#8a9891;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .header-cta{
+      min-height:44px;
+      padding:0 18px;
+      border-radius:10px;
+      font-size:13px;
+      box-shadow:none;
     }
 
     .hero{
-      padding:92px 0 56px;
+      position:relative;
+      overflow:hidden;
+      padding:94px 0 50px;
       background:
-        radial-gradient(circle at 15% 10%, rgba(22,131,75,.10), transparent 28%),
-        radial-gradient(circle at 85% 25%, rgba(217,45,32,.07), transparent 25%),
-        linear-gradient(180deg,#fbfdfc 0%,#f4f8f6 100%);
+        linear-gradient(90deg,rgba(15,81,50,.026) 1px,transparent 1px),
+        linear-gradient(rgba(15,81,50,.026) 1px,transparent 1px),
+        radial-gradient(circle at 7% 18%, rgba(22,131,75,.10), transparent 31%),
+        radial-gradient(circle at 94% 20%, rgba(217,45,32,.055), transparent 25%),
+        linear-gradient(180deg,#fcfefd 0%,#f4f8f6 100%);
+      background-size:42px 42px,42px 42px,auto,auto,auto;
       border-bottom:1px solid var(--line);
     }
 
+    .hero::after{
+      content:'';
+      position:absolute;
+      width:420px;
+      height:420px;
+      right:-170px;
+      top:-170px;
+      border:1px solid rgba(15,81,50,.08);
+      border-radius:50%;
+      box-shadow:0 0 0 55px rgba(15,81,50,.018),0 0 0 110px rgba(15,81,50,.012);
+      pointer-events:none;
+    }
+
     .hero-grid{
+      position:relative;
+      z-index:1;
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:54px;
+      grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
+      gap:68px;
       align-items:center;
+    }
+
+    .hero-copy{
+      max-width:760px;
+    }
+
+    .hero-kicker{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#567066;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+
+    .hero-kicker::before{
+      content:'';
+      width:28px;
+      height:2px;
+      border-radius:4px;
+      background:var(--red);
     }
 
     .hero h1{
       margin-top:18px;
-      max-width:820px;
-      font-size:clamp(42px,6.3vw,76px);
-      line-height:.98;
-      letter-spacing:-.055em;
+      max-width:790px;
+      font-size:clamp(42px,5.1vw,66px);
+      line-height:1.015;
+      letter-spacing:-.048em;
       color:#0b2f1e;
     }
 
     .hero h1 span{
+      display:block;
+      margin-top:4px;
       color:var(--red);
     }
 
     .hero .lead{
-      max-width:760px;
+      max-width:700px;
       margin-top:24px;
-      color:#4d6157;
-      font-size:19px;
+      color:#51655b;
+      font-size:18px;
+      line-height:1.7;
     }
 
     .network-line{
-      margin-top:18px;
-      color:#33483e;
-      font-weight:700;
-      font-size:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:22px;
+    }
+
+    .network-chip{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 11px;
+      border:1px solid #dce7e1;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      color:#365044;
+      font-size:11px;
+      font-weight:800;
+      box-shadow:0 5px 15px rgba(15,56,34,.03);
     }
 
     .hero-actions{
@@ -283,38 +418,98 @@
       margin-top:30px;
     }
 
+    .hero-actions .btn{
+      min-height:52px;
+      padding:0 22px;
+    }
+
+    .hero-proof{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-top:26px;
+      color:#6f8178;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .hero-proof span{
+      display:flex;
+      align-items:center;
+      gap:7px;
+    }
+
+    .hero-proof span::before{
+      content:'✓';
+      width:18px;
+      height:18px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#e9f5ee;
+      color:var(--green-2);
+      font-size:11px;
+      font-weight:900;
+    }
+
     .hero-card{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:28px;
-      box-shadow:var(--shadow);
+      position:relative;
+      background:rgba(255,255,255,.96);
+      border:1px solid #dce6e0;
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 28px 75px rgba(17,55,35,.11);
+    }
+
+    .hero-card::before{
+      content:'';
+      position:absolute;
+      left:30px;
+      top:0;
+      width:62px;
+      height:3px;
+      border-radius:0 0 4px 4px;
+      background:var(--red);
+    }
+
+    .price-kicker{
+      color:#85928c;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.11em;
+      text-transform:uppercase;
     }
 
     .hero-card h3{
       color:#103522;
       font-size:24px;
       line-height:1.2;
+      margin:7px 0 8px;
+    }
+
+    .price-note{
       margin-bottom:18px;
+      color:#7a8981;
+      font-size:12px;
+      line-height:1.5;
     }
 
     .quick-list{
       display:grid;
-      gap:12px;
+      gap:0;
     }
 
     .quick-item{
       display:flex;
-      align-items:flex-start;
+      align-items:center;
       justify-content:space-between;
       gap:18px;
-      padding:14px 0;
+      padding:16px 0;
       border-top:1px solid var(--line);
     }
 
     .quick-item:first-child{
       border-top:none;
-      padding-top:0;
     }
 
     .quick-item strong{
@@ -327,11 +522,16 @@
       display:block;
       margin-top:3px;
       color:var(--muted);
+      font-size:11px;
     }
 
     .quick-price{
-      font-weight:800;
+      padding:6px 9px;
+      border-radius:8px;
+      background:#fff5f4;
       color:var(--red);
+      font-size:13px;
+      font-weight:800;
       white-space:nowrap;
     }
 
@@ -771,19 +971,42 @@
       }
 
       .nav{
-        min-height:64px;
+        min-height:68px;
+        gap:12px;
+      }
+
+      .brand-sub{
+        display:none;
       }
 
       .mini-link{
         display:none;
       }
 
+      .header-cta{
+        min-height:40px;
+        padding:0 12px;
+        font-size:12px;
+      }
+
       .hero{
-        padding-top:68px;
+        padding-top:64px;
+      }
+
+      .hero-grid{
+        gap:34px;
       }
 
       .hero h1{
-        font-size:42px;
+        font-size:40px;
+      }
+
+      .hero .lead{
+        font-size:16px;
+      }
+
+      .hero-card{
+        padding:24px 20px;
       }
 
       .services,
@@ -823,25 +1046,29 @@
 
   <header>
     <div class="wrap nav">
-      <a href="#top" class="brand">
+      <a href="#top" class="brand" aria-label="İSKET GROUP — на главную">
         <div class="logo-mark" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>
-        <span>İSKET GROUP</span>
+        <span class="brand-copy">
+          <span class="brand-name">İSKET GROUP</span>
+          <span class="brand-sub">Supplier solutions</span>
+        </span>
       </a>
 
       <nav class="nav-links">
         <a href="#services">Услуги и цены</a>
-        <a href="#allin">Под ключ</a>
+        <a href="#allin">Сопровождение</a>
         <a href="#cases">Кейсы</a>
         <a href="#contact">Контакты</a>
       </nav>
 
       <div class="nav-actions">
         <a class="mini-link" href="https://wa.me/905306610835" target="_blank" rel="noopener">
+          <small>WhatsApp</small>
           +90 530 661 08 35
         </a>
-        <a class="btn btn-primary" href="#contact">Получить расчёт</a>
+        <a class="btn btn-primary header-cta" href="#contact">Получить расчёт</a>
       </div>
     </div>
   </header>
@@ -852,28 +1079,40 @@
       <div class="wrap">
         <div class="hero-grid">
 
-          <div>
-            <span class="eyebrow"><span class="dot"></span> сопровождение поставщиков</span>
+          <div class="hero-copy">
+            <div class="hero-kicker">B2B-консалтинг для поставщиков</div>
 
-            <h1>Выводим поставщиков в <span>федеральные торговые сети</span></h1>
+            <h1>Сопровождение поставщиков <span>при выходе в федеральные сети</span></h1>
 
             <p class="lead">
-              Проверяем компанию и документы, готовим поставщика к требованиям сети,
-              сопровождаем договор и помогаем пройти путь до начала работы.
+              Аудируем компанию и документы, готовим к требованиям торговой сети,
+              сопровождаем договор и организационные этапы до начала работы.
             </p>
 
-            <div class="network-line">
-              X5 Group · Пятёрочка · Перекрёсток · Чижик · Магнит / АО «Тандер»
+            <div class="network-line" aria-label="Сети, с которыми работает направление">
+              <span class="network-chip">X5 Group</span>
+              <span class="network-chip">Пятёрочка</span>
+              <span class="network-chip">Перекрёсток</span>
+              <span class="network-chip">Чижик</span>
+              <span class="network-chip">Магнит / АО «Тандер»</span>
             </div>
 
             <div class="hero-actions">
-              <a href="#services" class="btn btn-primary">Посмотреть услуги и цены</a>
+              <a href="#services" class="btn btn-primary">Услуги и цены</a>
               <a href="#allin" class="btn btn-secondary">Сопровождение под ключ</a>
+            </div>
+
+            <div class="hero-proof">
+              <span>Официальный договор</span>
+              <span>Конфиденциальность</span>
+              <span>Работа по согласованному плану</span>
             </div>
           </div>
 
           <aside class="hero-card">
-            <h3>С чего начинается стоимость</h3>
+            <div class="price-kicker">Прозрачные ориентиры</div>
+            <h3>Стоимость ключевых услуг</h3>
+            <p class="price-note">Финальная стоимость зависит от статуса компании, сети и объёма сопровождения.</p>
 
             <div class="quick-list">
               <div class="quick-item">
