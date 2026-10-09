@@ -3,7 +3,7 @@ name: Apply CRM hook
 on:
   push:
     paths:
-      - '.github/workflows/apply-crm-hook.yml'
+      - ".github/workflows/apply-crm-hook.yml"
 
 permissions:
   contents: write
@@ -17,8 +17,8 @@ jobs:
           fetch-depth: 0
 
       - name: Patch landing form
-        shell: python
         run: |
+          python3 <<'PY'
           from pathlib import Path
 
           path = Path('index.html')
@@ -75,6 +75,7 @@ jobs:
               text = text.replace(marker, "    });" + hook + "\n  </script>", 1)
 
           path.write_text(text, encoding='utf-8')
+          PY
 
       - name: Commit landing update
         run: |
