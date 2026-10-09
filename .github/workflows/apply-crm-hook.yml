@@ -1,0 +1,13 @@
+name: CRM Patch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-crm-hook.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate runner
+        run: echo "CRM patch workflow is available"
