@@ -2,6 +2,21 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <!-- Yandex.Metrika -->
+  <script>
+    (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      k=e.createElement(t);a=e.getElementsByTagName(t)[0];
+      k.async=1;k.src=r;a.parentNode.insertBefore(k,a);
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+    ym(113582962, 'init', {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true
+    });
+  </script>
+  <!-- /Yandex.Metrika -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>İSKET GROUP — Выход поставщиков в федеральные торговые сети</title>
@@ -1043,6 +1058,7 @@
   </style>
 </head>
 <body>
+  <noscript><div><img src="https://mc.yandex.ru/watch/113582962" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
   <header>
     <div class="wrap nav">
@@ -1068,7 +1084,7 @@
           <small>WhatsApp</small>
           +90 530 661 08 35
         </a>
-        <a class="btn btn-primary header-cta" href="#contact">Получить расчёт</a>
+        <a class="btn btn-primary header-cta" href="#contact" data-goal="calculate_click">Получить расчёт</a>
       </div>
     </div>
   </header>
@@ -1192,7 +1208,7 @@
               <li>подготовка к комплаенсу</li>
               <li>сопровождение договора</li>
             </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Чижик">Получить расчёт</a>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Чижик" data-goal="calculate_click">Получить расчёт</a>
           </article>
 
           <article class="service-card featured">
@@ -1206,7 +1222,7 @@
               <li>подготовка к проверкам</li>
               <li>сопровождение запуска</li>
             </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Перекрёсток">Получить расчёт</a>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Перекрёсток" data-goal="calculate_click">Получить расчёт</a>
           </article>
 
           <article class="service-card featured">
@@ -1220,7 +1236,7 @@
               <li>подготовка к аудиту</li>
               <li>сопровождение договора</li>
             </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Пятёрочку">Получить расчёт</a>
+            <a href="#contact" class="btn btn-green" data-service="Выход в Пятёрочку" data-goal="calculate_click">Получить расчёт</a>
           </article>
 
           <article class="service-card">
@@ -1344,7 +1360,7 @@
               <li>фиксация объёма работ в договоре</li>
             </ul>
 
-            <a href="#contact" class="btn btn-primary" data-service="Комплексное сопровождение под ключ">
+            <a href="#contact" class="btn btn-primary" data-service="Комплексное сопровождение под ключ" data-goal="calculate_click">
               Получить расчёт проекта
             </a>
           </div>
@@ -1570,6 +1586,65 @@
           // Formspree remains the fallback source even if the CRM webhook is unavailable.
         }
       });
+    })();
+  </script>
+
+  <script>
+    (function(){
+      // Goal IDs must match the JavaScript event goals in counter 113582962.
+      // Send only fixed service names/element locations, never contact details.
+      function reachGoal(name, params){
+        try {
+          if(typeof window.ym === 'function'){
+            window.ym(113582962, 'reachGoal', name, params || {});
+          }
+        } catch (error) {
+          // Analytics must never interrupt navigation or lead delivery.
+        }
+      }
+
+      document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link){
+        link.addEventListener('click', function(){
+          reachGoal('whatsapp_click', {
+            placement: link.classList.contains('floating-wa') ? 'floating' : 'header'
+          });
+        });
+      });
+
+      document.querySelectorAll('[data-goal="calculate_click"]').forEach(function(link){
+        link.addEventListener('click', function(){
+          reachGoal('calculate_click', {
+            service: link.getAttribute('data-service') || 'general'
+          });
+        });
+      });
+
+      document.querySelectorAll('[data-service]').forEach(function(button){
+        button.addEventListener('click', function(){
+          reachGoal('service_select', {
+            service: button.getAttribute('data-service'),
+            source: 'button'
+          });
+        });
+      });
+
+      var select = document.getElementById('service');
+      if(select){
+        select.addEventListener('change', function(){
+          if(select.value){
+            reachGoal('service_select', {service: select.value, source: 'form'});
+          }
+        });
+      }
+
+      var form = document.getElementById('leadForm');
+      if(form){
+        form.addEventListener('submit', function(){
+          // Native validation runs before submit. This records submission,
+          // not confirmed delivery (the CRM request uses no-cors).
+          reachGoal('form_submit', {service: select ? select.value : ''});
+        });
+      }
     })();
   </script>
 
