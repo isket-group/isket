@@ -1456,8 +1456,9 @@
             </div>
           </div>
 
-          <form action="https://formspree.io/f/mkjgeynq" method="POST">
+          <form id="leadForm" action="https://formspree.io/f/mkjgeynq" method="POST">
             <input type="hidden" name="form_type" value="Новый продающий лендинг İSKET GROUP">
+            <input type="hidden" id="request_id" name="request_id" value="">
 
             <div class="field">
               <label for="name">Ваше имя *</label>
@@ -1536,6 +1537,40 @@
         });
       });
     });
+
+    (function(){
+      var CRM_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
+      var form = document.getElementById('leadForm');
+      var requestInput = document.getElementById('request_id');
+
+      if(!form || !requestInput) return;
+
+      form.addEventListener('submit', function(){
+        var requestId = 'ISKET-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2,8).toUpperCase();
+        requestInput.value = requestId;
+
+        var data = new FormData(form);
+        var params = new URLSearchParams();
+
+        data.forEach(function(value, key){
+          params.append(key, value);
+        });
+
+        try {
+          fetch(CRM_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            keepalive: true,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: params.toString()
+          }).catch(function(){});
+        } catch (error) {
+          // Formspree remains the fallback source even if the CRM webhook is unavailable.
+        }
+      });
+    })();
   </script>
 
 </body>
