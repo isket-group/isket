@@ -1,0 +1,89 @@
+name: Apply CRM hook
+
+on:
+  push:
+    paths:
+      - '.github/workflows/apply-crm-hook.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Patch landing form
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          old_form = '<form action="https://formspree.io/f/mkjgeynq" method="POST">\n            <input type="hidden" name="form_type" value="Новый продающий лендинг İSKET GROUP">'
+          new_form = '<form id="leadForm" action="https://formspree.io/f/mkjgeynq" method="POST">\n            <input type="hidden" name="form_type" value="Новый продающий лендинг İSKET GROUP">\n            <input type="hidden" id="request_id" name="request_id" value="">'
+
+          if 'id="leadForm"' not in text:
+              if old_form not in text:
+                  raise SystemExit('Expected form markup not found')
+              text = text.replace(old_form, new_form, 1)
+
+          marker = "    });\n  </script>"
+          hook = r'''
+
+    (function(){
+      var CRM_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
+      var form = document.getElementById('leadForm');
+      var requestInput = document.getElementById('request_id');
+
+      if(!form || !requestInput) return;
+
+      form.addEventListener('submit', function(){
+        var requestId = 'ISKET-' + Date.now().toString(36).toUpperCase() + '-' + Math.random().toString(36).slice(2,8).toUpperCase();
+        requestInput.value = requestId;
+
+        var data = new FormData(form);
+        var params = new URLSearchParams();
+
+        data.forEach(function(value, key){
+          params.append(key, value);
+        });
+
+        try {
+          fetch(CRM_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            keepalive: true,
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: params.toString()
+          }).catch(function(){});
+        } catch (error) {
+          // Formspree remains the fallback source even if the CRM webhook is unavailable.
+        }
+      });
+    })();'''
+
+          if 'CRM_WEBHOOK_URL' not in text:
+              if marker not in text:
+                  raise SystemExit('Script insertion point not found')
+              text = text.replace(marker, "    });" + hook + "\n  </script>", 1)
+
+          path.write_text(text, encoding='utf-8')
+
+      - name: Commit landing update
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "OpenAI ChatGPT"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "feat: add real-time CRM intake"
+          git push
