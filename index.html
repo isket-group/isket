@@ -1063,6 +1063,23 @@
     .upcoming-service .service-price{font-size:22px;}
     @media(max-width:640px){.faq-item{padding:18px;}.case h3{overflow-wrap:anywhere;}}
   </style>
+<style>
+#services .services{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#services .service-card{padding:26px;gap:12px}
+#services .service-card h3,#services .service-card p,#services .service-price{margin-top:0}
+#services .service-card .btn{margin-top:auto}
+.service-dialog{width:min(760px,calc(100% - 32px));max-height:88vh;border:1px solid var(--line);border-radius:24px;padding:32px;color:var(--green);background:#fff;box-sizing:border-box;overflow:auto}
+.service-dialog::backdrop{background:rgba(5,32,20,.62)}
+.service-dialog h2{padding-right:30px;margin:0 0 16px;font-size:28px}
+.service-dialog p{line-height:1.65;color:var(--muted);margin:12px 0}
+.dialog-close{position:absolute;right:16px;top:12px;border:0;background:transparent;font-size:32px;cursor:pointer;color:var(--green)}
+.calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.service-dialog .field{margin:16px 0}.calculator-grid .field{margin:0}
+.quote-box{display:grid;gap:8px;background:#f0f8f3;border:1px solid #c4e4d2;border-radius:16px;padding:20px;margin:18px 0}
+.quote-box strong{font-size:28px}.quote-box span,.quote-box div{font-size:14px}
+.service-dialog .btn{margin-top:12px}.promo-status{font-size:13px;min-height:20px}
+@media(max-width:600px){#services .services,.calculator-grid{grid-template-columns:1fr}.service-dialog{padding:24px 18px}.service-dialog h2{font-size:24px}}
+</style>
 </head>
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/113582962" style="position:absolute; left:-9999px;" alt=""></div></noscript>
@@ -1192,119 +1209,12 @@
       </div>
     </section>
 
-    <section class="section" id="services">
-      <div class="wrap">
+    <section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow"><span class="dot"></span> наши услуги</span><h2>Выберите задачу — остальное уточним</h2><p>Четыре направления поддержки поставщиков. Откройте подробности, чтобы узнать состав услуги и рассчитать стоимость.</p></div><div class="services"><article class="service-card"><span class="service-tag">İSKET GROUP</span><h3>Контракты</h3><p>Подготовка и сопровождение работы с торговыми сетями.</p><div class="service-price">от 500 000 ₽</div><button type="button" class="btn btn-green" data-open-service="contracts">Подробнее</button></article>
+<article class="service-card"><span class="service-tag">İSKET GROUP</span><h3>Документы</h3><p>Юридический и технический пакет производителя.</p><div class="service-price">250 000 ₽</div><button type="button" class="btn btn-green" data-open-service="documents">Подробнее</button></article>
+<article class="service-card"><span class="service-tag">İSKET GROUP</span><h3>Штрафы</h3><p>Претензии, логистические споры и официальная переписка.</p><div class="service-price">Индивидуально</div><button type="button" class="btn btn-green" data-open-service="legal">Подробнее</button></article>
+<article class="service-card"><span class="service-tag">İSKET GROUP</span><h3>Менеджмент</h3><p>KAM, специалисты и усиление команды поставщика.</p><div class="service-price">По запросу</div><button type="button" class="btn btn-green" data-open-service="management">Подробнее</button></article></div></div></section>
 
-        <div class="section-head">
-          <span class="eyebrow"><span class="dot"></span> услуги</span>
-          <h2>Выберите задачу и сразу увидите ориентир по стоимости</h2>
-          <p>
-            Консультационная поддержка производителей, трейдеров и импортёров.
-            Сначала изучаем вашу задачу, затем определяем объём работ и фиксируем его в договоре.
-          </p>
-        </div>
-
-        <div class="services">
-
-          <article class="service-card featured">
-            <span class="service-tag">X5 Group</span>
-            <h3>Выход в Чижик</h3>
-            <p>Сопровождение подготовки производителей, трейдеров и импортёров к работе с «Чижиком»: аудит, документы и организационные этапы.</p>
-            <div class="service-price">от 500 000 ₽</div>
-            <ul class="checklist">
-              <li>аудит компании</li>
-              <li>проверка документации</li>
-              <li>подготовка к комплаенсу</li>
-              <li>сопровождение договора</li>
-            </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Чижик" data-goal="calculate_click">Получить расчёт</a>
-          </article>
-
-          <article class="service-card featured">
-            <span class="service-tag">X5 Group</span>
-            <h3>Выход в Перекрёсток</h3>
-            <p>Подготовка к работе с «Перекрёстком»: аудит компании, юридические и технические регламенты, комплаенс и сопровождение старта отгрузок.</p>
-            <div class="service-price">от 600 000 ₽</div>
-            <ul class="checklist">
-              <li>предварительный аудит</li>
-              <li>документы и регламенты</li>
-              <li>подготовка к проверкам</li>
-              <li>сопровождение запуска</li>
-            </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Перекрёсток" data-goal="calculate_click">Получить расчёт</a>
-          </article>
-
-          <article class="service-card featured">
-            <span class="service-tag">X5 Group</span>
-            <h3>Выход в Пятёрочку</h3>
-            <p>Подготовка поставщика к работе с «Пятёрочкой»: проверка исходных данных, документация, подготовка к аудиту и сопровождение договора.</p>
-            <div class="service-price">от 750 000 ₽</div>
-            <ul class="checklist">
-              <li>аудит компании</li>
-              <li>подготовка полного пакета</li>
-              <li>подготовка к аудиту</li>
-              <li>сопровождение договора</li>
-            </ul>
-            <a href="#contact" class="btn btn-green" data-service="Выход в Пятёрочку" data-goal="calculate_click">Получить расчёт</a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-tag">Экспертный отдел</span>
-            <h3>Документы производителя</h3>
-            <p>
-              Разработка юридического и технического пакета документов для подтверждения статуса производителя и самостоятельного прохождения комплаенс-аудита службы безопасности и агрономов.
-            </p>
-            <div class="service-price">250 000 ₽</div>
-            <ul class="checklist">
-              <li>анализ текущих документов</li>
-              <li>формирование недостающего пакета</li>
-              <li>подготовка под требования сети</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-service="Документы производителя">Оставить заявку</a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-tag">Юридический отдел</span>
-            <h3>Штрафы и претензии</h3>
-            <p>
-              Составление претензий, актов разногласий и официальных писем по заказам и штрафам. Сопровождение согласования корректировок, вопросов блокировки по SL/SLT и оплатам, досудебного урегулирования споров.
-            </p>
-            <div class="service-price">индивидуально <span>по задаче</span></div>
-            <ul class="checklist">
-              <li>SL / SLT и недопоставки</li>
-              <li>логистические споры</li>
-              <li>официальная переписка</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-service="Штрафы и претензии">Описать ситуацию</a>
-          </article>
-
-          <article class="service-card">
-            <span class="service-tag">Менеджмент</span>
-            <h3>KAM и специалисты</h3>
-            <p>
-              Кадровая поддержка и предоставление сотрудников: подбор профильных специалистов и менеджеров по продажам (KAM) для работы с X5 Group.
-            </p>
-            <div class="service-price">по запросу</div>
-            <ul class="checklist">
-              <li>менеджеры продаж</li>
-              <li>специалисты по работе с сетью</li>
-              <li>точечное усиление команды</li>
-            </ul>
-            <a href="#contact" class="btn btn-secondary" data-service="KAM и специалисты">Обсудить задачу</a>
-          </article>
-
-          <article class="service-card upcoming-service">
-            <span class="service-tag">Департамент контрактов · планируемое направление</span>
-            <h3>Сопровождение в АО «Тандер» / «Магнит»</h3>
-            <p>Подготовка поставщиков к работе с сетью: аудит компании, документация, комплаенс и организационные этапы.</p>
-            <div class="service-price">Скоро</div>
-            <p>Направление пока не открыто для заказа.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section all-in" id="allin">
+<section class="section all-in" id="allin">
       <div class="wrap">
         <div class="allin-grid">
 
@@ -1525,7 +1435,8 @@
                 <option>Выход в Чижик</option>
                 <option>Выход в Перекрёсток</option>
                 <option>Выход в Пятёрочку</option>
-                <option>Документы производителя</option>
+                <option>Выход во все три сети</option>
+<option>Документы производителя</option>
                 <option>Штрафы и претензии</option>
                 <option>KAM и специалисты</option>
                 <option>Комплексное сопровождение под ключ</option>
@@ -1556,6 +1467,18 @@
     </section>
 
   </main>
+<dialog id="contracts-dialog" class="service-dialog" aria-labelledby="contracts-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="contracts-title">Контракты с торговыми сетями</h2><p>Аудит компании, документы, подготовка к проверкам и сопровождение договора. Выберите исходные условия для предварительного расчёта.</p><div class="calculator-grid">
+<div class="field"><label for="calc-network">Целевая сеть</label><select id="calc-network"><option value="chizhik">Чижик</option><option value="perekrestok">Перекрёсток</option><option value="pyaterochka">Пятёрочка</option><option value="all">Все три сети</option></select></div>
+<div class="field"><label for="calc-supplier">Статус поставщика</label><select id="calc-supplier"><option value="active">Действующий поставщик</option><option value="new">Недействующий поставщик</option></select></div>
+<div class="field"><label for="calc-category">Категория компании</label><select id="calc-category"><option value="trader">Трейдер</option><option value="producer">Производитель</option><option value="importer">Импортер</option></select></div>
+<div class="field"><label for="calc-role">Формат выхода</label><select id="calc-role"><option value="unchanged">Без изменений</option><option value="trader">Как трейдер</option><option value="importer">Как импортер</option><option value="producer">Как производитель</option></select></div>
+<div class="field"><label for="calc-age">Возраст компании</label><select id="calc-age"><option value="established">От 1 года</option><option value="young">Менее 1 года</option></select></div>
+<div class="field"><label for="calc-region">Регион работы</label><input id="calc-region" placeholder="Например, Москва и область"></div></div>
+<p class="form-note">«Магнит» — направление готовится к запуску.</p><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p class="promo-status" id="contracts-promo-status" aria-live="polite"></p>
+<div class="quote-box"><span>Предварительная стоимость</span><strong id="contracts-total" aria-live="polite"></strong><div id="contracts-breakdown"></div></div><p class="form-note">Расчёт зависит от выбранных условий. Объём работ и итоговую стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><button class="btn btn-primary" type="button" data-request-service="contracts">Перейти к заявке</button></dialog>
+<dialog id="documents-dialog" class="service-dialog" aria-labelledby="documents-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="documents-title">Документы производителя</h2><p>Разработка юридического и технического пакета для подтверждения статуса производителя и подготовки к комплаенс-аудиту.</p><ul class="checklist"><li>Анализ текущих документов</li><li>Формирование недостающего пакета</li><li>Подготовка под требования сети</li></ul><div class="field"><label for="documents-promo">Промокод</label><input id="documents-promo" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p class="promo-status" id="documents-promo-status" aria-live="polite"></p><div class="quote-box"><span>Стоимость услуги</span><strong id="documents-total" aria-live="polite"></strong></div><p class="form-note">Состав пакета и условия работы согласуем после изучения задачи.</p><button type="button" class="btn btn-primary" data-request-service="documents">Перейти к заявке</button></dialog>
+<dialog id="legal-dialog" class="service-dialog" aria-labelledby="legal-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="legal-title">Штрафы и претензии</h2><p>Подготовка претензий, актов разногласий и официальных писем. Сопровождение вопросов по SL / SLT, недопоставкам, блокировкам, оплатам и корректировкам заказов.</p><div class="field"><label for="legal-task">Ваша задача</label><select id="legal-task"><option value="Штрафы SL / SLT и недопоставки">Штрафы SL / SLT и недопоставки</option><option value="Блокировки и оплаты">Блокировки и оплаты</option><option value="Корректировки заказов и перепоставки">Корректировки заказов и перепоставки</option><option value="Досудебная претензия">Досудебная претензия</option><option value="Другая задача">Другая задача</option></select></div><div class="quote-box"><strong>Индивидуальный расчёт</strong><span>Для оценки нужны сеть, описание ситуации и имеющиеся документы.</span></div><button type="button" class="btn btn-primary" data-request-service="legal">Описать ситуацию</button></dialog>
+<dialog id="management-dialog" class="service-dialog" aria-labelledby="management-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="management-title">Менеджмент и специалисты</h2><p>Кадровая поддержка для работы с X5 Group: менеджеры по продажам (KAM), специалисты по работе с сетью и точечное усиление команды.</p><div class="field"><label for="management-task">Формат поддержки</label><select id="management-task"><option value="KAM / менеджер по продажам">KAM / менеджер по продажам</option><option value="Специалист по работе с сетью">Специалист по работе с сетью</option><option value="Усиление команды">Усиление команды</option></select></div><div class="quote-box"><strong>Стоимость по запросу</strong><span>Определим задачи, объём участия и подходящий формат работы.</span></div><button type="button" class="btn btn-primary" data-request-service="management">Обсудить задачу</button></dialog>
 
   <footer>
     <div class="wrap footer-row">
@@ -1680,5 +1603,59 @@
     })();
   </script>
 
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var money=function(n){return n.toLocaleString('ru-RU')+' ₽'};
+  function quote(network,supplier,role,age,promo){
+    var base={chizhik:500000,perekrestok:600000,pyaterochka:750000,all:1650000}[network];
+    if(!base) return null;
+    var extras=(supplier==='new'?200000:0)+(role==='producer'?200000:0)+(age==='young'?100000:0);
+    var discount=promo.trim().toUpperCase()==='ISKET5'?.05:0;
+    return {base:base,extras:extras,discount:discount,total:Math.round((base+extras)*(1-discount))};
+  }
+  window.isketQuote=quote;
+  function promoStatus(id){
+    var code=$(id+'-promo').value.trim();
+    var valid=code.toUpperCase()==='ISKET5';
+    $(id+'-promo-status').textContent=code?(valid?'Промокод применён: скидка 5%.':'Промокод не найден. Расчёт без скидки.'):'';
+    return valid;
+  }
+  function update(){
+    var q=quote($('calc-network').value,$('calc-supplier').value,$('calc-role').value,$('calc-age').value,$('contracts-promo').value);
+    promoStatus('contracts');promoStatus('documents');
+    $('contracts-total').textContent='от '+money(q.total);
+    $('contracts-breakdown').textContent='Базовая стоимость: '+money(q.base)+(q.extras?' · Дополнительные условия: '+money(q.extras):'')+(q.discount?' · Скидка: 5%':'');
+    $('documents-total').textContent=money(promoStatus('documents')?237500:250000);
+  }
+  document.querySelectorAll('[data-open-service]').forEach(function(b){
+    b.addEventListener('click',function(){update();$(b.dataset.openService+'-dialog').showModal()});
+  });
+  document.querySelectorAll('.service-dialog').forEach(function(d){
+    d.querySelector('[data-close-dialog]').addEventListener('click',function(){d.close()});
+    d.addEventListener('click',function(e){if(e.target===d){var r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});
+    d.querySelectorAll('input,select').forEach(function(input){input.addEventListener('input',update)});
+  });
+  var previousSummary='';
+  document.querySelectorAll('[data-request-service]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var kind=b.dataset.requestService,service,summary;
+      var label=function(id){var s=$(id);return s.options[s.selectedIndex].text};
+      if(kind==='contracts'){
+        service={chizhik:'Выход в Чижик',perekrestok:'Выход в Перекрёсток',pyaterochka:'Выход в Пятёрочку',all:'Выход во все три сети'}[$('calc-network').value];
+        summary='Контракты: '+label('calc-network')+'; '+label('calc-supplier')+'; '+label('calc-category')+'; '+label('calc-role')+'; '+label('calc-age')+'. Регион: '+($('calc-region').value.trim()||'не указан')+'. Предварительный расчёт: '+$('contracts-total').textContent+($('contracts-promo').value.trim().toUpperCase()==='ISKET5'?' (ISKET5, скидка 5%)':'')+'.';
+      }else if(kind==='documents'){
+        service='Документы производителя';summary=service+'. Расчёт: '+$('documents-total').textContent+(promoStatus('documents')?' (ISKET5, скидка 5%)':'')+'.';
+      }else{service=kind==='legal'?'Штрафы и претензии':'KAM и специалисты';summary=service+': '+label(kind+'-task')+'. Стоимость — по индивидуальной оценке.'}
+      var message=$('message');var existing=message.value;
+      if(previousSummary) existing=existing.replace(previousSummary,'').trim();
+      message.value=(existing?existing+'\n\n':'')+summary;previousSummary=summary;
+      $('service').value=service;
+      $(kind+'-dialog').close();location.hash='contact';$('name').focus();
+    });
+  });
+  update();
+})();
+</script>
 </body>
 </html>
