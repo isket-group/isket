@@ -1079,6 +1079,8 @@
 .quote-box strong{font-size:28px}.quote-box span,.quote-box div{font-size:14px}
 .service-dialog .btn{margin-top:12px}.promo-status{font-size:13px;min-height:20px}
 @media(max-width:600px){#services .services,.calculator-grid{grid-template-columns:1fr}.service-dialog{padding:24px 18px}.service-dialog h2{font-size:24px}}
+
+.service-dialog form{padding:0;border:0;box-shadow:none;background:none}.service-dialog h2{margin-top:14px}.service-dialog [hidden]{display:none!important}.service-dialog .field{margin:16px 0}.service-dialog button[type=submit]{width:100%}
 </style>
 </head>
 <body>
@@ -1209,7 +1211,7 @@
       </div>
     </section>
 
-    <section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow"><span class="dot"></span> наши услуги</span><h2>Выберите задачу — остальное уточним</h2><p>Четыре направления поддержки поставщиков. Откройте подробности, чтобы узнать состав услуги и рассчитать стоимость.</p></div><div class="services"><article class="service-card"><span class="service-tag">Департамент контрактов</span><h3>Контракты с X5 Group</h3><p>Аудит компании, подготовка к комплаенсу и сопровождение запуска поставок в «Чижик», «Перекрёсток» и «Пятёрочку».</p><div class="service-price">от 500 000 ₽</div><button type="button" class="btn btn-green" data-open-service="contracts">Рассчитать контракт</button></article>
+    <section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow"><span class="dot"></span> наши услуги</span><h2>Выберите задачу — остальное уточним</h2><p>Четыре направления поддержки поставщиков. Откройте подробности, чтобы узнать состав услуги и рассчитать стоимость.</p></div><div class="services"><article class="service-card"><span class="service-tag">Департамент контрактов</span><h3>Контракты и импорт</h3><p>Сопровождение работы с X5 Group и импорт через АО «АРВИАЙ». Выберите направление и рассчитайте стоимость.</p><div class="service-price">от 500 000 ₽</div><p>Импорт: 3 500–4 000 $</p><button type="button" class="btn btn-green" data-open-service="contracts">Рассчитать контракт</button></article>
 <article class="service-card"><span class="service-tag">Экспертный отдел</span><h3>Документы производителя</h3><p>Юридический и технический пакет для подтверждения статуса производителя и самостоятельного прохождения комплаенс-аудита.</p><div class="service-price">250 000 ₽</div><button type="button" class="btn btn-green" data-open-service="documents">Рассчитать и оставить заявку</button></article>
 <article class="service-card"><span class="service-tag">Юридический отдел</span><h3>Штрафы и претензии</h3><p>Претензии, акты разногласий и официальные письма по заказам, штрафам, блокировкам и оплатам.</p><div class="service-price">Индивидуально</div><button type="button" class="btn btn-green" data-open-service="legal">Описать ситуацию</button></article>
 <article class="service-card"><span class="service-tag">Услуги менеджмента</span><h3>Продажи и работа с X5 Group</h3><p>Подбор KAM и профильных специалистов для работы с торговыми сетями и усиления вашей команды.</p><div class="service-price">По запросу</div><button type="button" class="btn btn-green" data-open-service="management">Подробнее о специалистах</button></article></div></div></section>
@@ -1435,7 +1437,7 @@
                 <option>Выход в Чижик</option>
                 <option>Выход в Перекрёсток</option>
                 <option>Выход в Пятёрочку</option>
-                <option>Выход во все три сети</option>
+                <option>Выход во все три сети</option><option>АО «АРВИАЙ» — прямой импорт</option><option>АО «АРВИАЙ» — технический импорт</option>
 <option>Документы производителя</option>
                 <option>Штрафы и претензии</option>
                 <option>KAM и специалисты</option>
@@ -1467,20 +1469,183 @@
     </section>
 
   </main>
-<dialog id="contracts-dialog" class="service-dialog" aria-labelledby="contracts-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="contracts-title">Контракты с торговыми сетями</h2><p>Аудит компании, документы, подготовка к проверкам и сопровождение договора. Выберите исходные условия для предварительного расчёта.</p><div class="calculator-grid">
-<div class="field"><label for="calc-network">Целевая сеть</label><select id="calc-network"><option value="chizhik">Чижик</option><option value="perekrestok">Перекрёсток</option><option value="pyaterochka">Пятёрочка</option><option value="all">Все три сети</option></select></div>
-<div class="field"><label for="calc-supplier">Статус поставщика</label><select id="calc-supplier"><option value="active">Действующий поставщик</option><option value="new">Недействующий поставщик</option></select></div>
-<div class="field"><label for="calc-category">Категория компании</label><select id="calc-category"><option value="trader">Трейдер</option><option value="producer">Производитель</option><option value="importer">Импортер</option></select></div>
-<div class="field"><label for="calc-role">Формат выхода</label><select id="calc-role"><option value="unchanged">Без изменений</option><option value="trader">Как трейдер</option><option value="importer">Как импортер</option><option value="producer">Как производитель</option></select></div>
-<div class="field"><label for="calc-age">Возраст компании</label><select id="calc-age"><option value="established">От 1 года</option><option value="young">Менее 1 года</option></select></div>
-<div class="field"><label for="calc-region">Регион работы</label><input id="calc-region" placeholder="Например, Москва и область"></div></div>
-<p class="form-note">«Магнит» — направление готовится к запуску.</p><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p class="promo-status" id="contracts-promo-status" aria-live="polite"></p>
-<div class="quote-box"><span>Предварительная стоимость</span><strong id="contracts-total" aria-live="polite"></strong><div id="contracts-breakdown"></div></div><p class="form-note">Расчёт зависит от выбранных условий. Объём работ и итоговую стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><button class="btn btn-primary" type="button" data-request-service="contracts">Перейти к заявке</button></dialog>
-<dialog id="documents-dialog" class="service-dialog" aria-labelledby="documents-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="documents-title">Документы производителя</h2><p>Разработка юридического и технического пакета для подтверждения статуса производителя и подготовки к комплаенс-аудиту.</p><ul class="checklist"><li>Анализ текущих документов</li><li>Формирование недостающего пакета</li><li>Подготовка под требования сети</li></ul><div class="field"><label for="documents-promo">Промокод</label><input id="documents-promo" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p class="promo-status" id="documents-promo-status" aria-live="polite"></p><div class="quote-box"><span>Стоимость услуги</span><strong id="documents-total" aria-live="polite"></strong></div><p class="form-note">Состав пакета и условия работы согласуем после изучения задачи.</p><button type="button" class="btn btn-primary" data-request-service="documents">Перейти к заявке</button></dialog>
-<dialog id="legal-dialog" class="service-dialog" aria-labelledby="legal-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="legal-title">Штрафы и претензии</h2><p>Подготовка претензий, актов разногласий и официальных писем. Сопровождение вопросов по SL / SLT, недопоставкам, блокировкам, оплатам и корректировкам заказов.</p><div class="field"><label for="legal-task">Ваша задача</label><select id="legal-task"><option value="Штрафы SL / SLT и недопоставки">Штрафы SL / SLT и недопоставки</option><option value="Блокировки и оплаты">Блокировки и оплаты</option><option value="Корректировки заказов и перепоставки">Корректировки заказов и перепоставки</option><option value="Досудебная претензия">Досудебная претензия</option><option value="Другая задача">Другая задача</option></select></div><div class="quote-box"><strong>Индивидуальный расчёт</strong><span>Для оценки нужны сеть, описание ситуации и имеющиеся документы.</span></div><button type="button" class="btn btn-primary" data-request-service="legal">Описать ситуацию</button></dialog>
-<dialog id="management-dialog" class="service-dialog" aria-labelledby="management-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><h2 id="management-title">Менеджмент и специалисты</h2><p>Кадровая поддержка для работы с X5 Group: менеджеры по продажам (KAM), специалисты по работе с сетью и точечное усиление команды.</p><div class="field"><label for="management-task">Формат поддержки</label><select id="management-task"><option value="KAM / менеджер по продажам">KAM / менеджер по продажам</option><option value="Специалист по работе с сетью">Специалист по работе с сетью</option><option value="Усиление команды">Усиление команды</option></select></div><div class="quote-box"><strong>Стоимость по запросу</strong><span>Определим задачи, объём участия и подходящий формат работы.</span></div><button type="button" class="btn btn-primary" data-request-service="management">Обсудить задачу</button></dialog>
+<dialog id="contracts-dialog" class="service-dialog" aria-labelledby="contracts-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Департамент контрактов</span><h2 id="contracts-title">Калькулятор стоимости и заявка на сопровождение договора</h2><p>Заполните параметры вашей компании, чтобы узнать ориентировочную стоимость консалтинговых услуг.</p><form id="contractForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="contract">
+                <input type="hidden" name="form_type" value="Заявка на заключение договора с X5 Group">
+                
 
-  <footer>
+                <div class="field">
+                    <label for="contract_company_name">1. Наименование ООО *</label>
+                    <input type="text" id="contract_company_name" name="company_name" placeholder="ООО «Агро-Стандарт»" required>
+                </div>
+
+                <div class="field">
+                    <label for="supplierCategory">2. Категория поставщика *</label>
+                    <select name="supplier_category" id="supplierCategory" required>
+                        <option value="" disabled selected>Выберите категорию</option>
+                        <option value="Действующий поставщик">2.1 Действующий поставщик</option>
+                        <option value="Недействующий поставщик">2.2 Недействующий поставщик (+200 000 ₽)</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="companyCategory">3. Категория компании *</label>
+                    <select name="company_category" id="companyCategory" required>
+                        <option value="" disabled selected>Выберите статус</option>
+                        <option value="Трейдер">3.1 Трейдер</option>
+                        <option value="Производитель">3.2 Производитель</option>
+                        <option value="Импортер">3.3 Импортер</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="retailTarget">4. Направление сопровождения *</label>
+                    <select name="retail_target" id="retailTarget" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <optgroup label="Торговые сети X5 Group · ₽"><option value="ТСХ Перекресток">4.1 ТСХ Перекрёсток (от 600 000 ₽)</option>
+                        <option value="ДСК Пятерочка">4.2 ДСК Пятёрочка (от 750 000 ₽)</option>
+                        <option value="ТСЧ Чижик">4.3 ТСЧ Чижик (от 500 000 ₽)</option>
+                        <option value="Все три сети">4.4 Все три сети (от 1 650 000 ₽)</option></optgroup><optgroup label="АО «АРВИАЙ» · импорт · $"><option value="ARVIAY_DIRECT">АО «АРВИАЙ» — прямой импорт (4 000 $)</option><option value="ARVIAY_TECH">АО «АРВИАЙ» — технический импорт (3 500 $)</option></optgroup>
+                    </select>
+                </div>
+
+                <div class="field" id="contract-role-block">
+                    <label for="entryRole">5. Хотите войти в сеть как: *</label>
+                    <select name="entry_role" id="entryRole" required>
+                        <option value="Как производитель" selected>Как производитель (+200 000 ₽)</option>
+                        <option value="Как трейдер">Как трейдер</option>
+                        <option value="Как импортер">Как импортер</option>
+                        <option value="Без изменений">Без изменений</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="companyAge">Возраст компании (ООО) *</label>
+                    <select name="company_age" id="companyAge" required>
+                        <option value="" disabled selected>Выберите возраст юрлица</option>
+                        <option value="Более 1 года">От 1 года</option>
+                        <option value="Менее 1 года">Менее 1 года (+100 000 ₽ к стоимости)</option>
+                    </select>
+                </div>
+
+                <div id="contract-import-info" hidden><p>АО «АРВИАЙ»: направления поставок для «Перекрёстка», «Пятёрочки», «Чижика» и «Впрок».</p><div class="field"><label for="contract_product">Продукция *</label><input id="contract_product" name="contract_product" type="text" placeholder="Например, свежие овощи"></div><div class="field"><label for="contract_country">Страна поставки *</label><input id="contract_country" name="contract_country" type="text" placeholder="Например, Турция"></div></div><div class="field">
+                    <label for="contract_sales_region">Регион продаж *</label>
+                    <input type="text" id="contract_sales_region" name="sales_region" placeholder="Например: Москва, Центр, Северо-Запад..." required>
+                </div>
+
+                <div class="field">
+                    <label for="contract_client_phone">Контактный телефон (WhatsApp) *</label>
+                    <input type="tel" id="contract_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                
+                <div class="field"><label for="contract_name">Ваше имя *</label><input id="contract_name" name="contract_name" type="text" required autocomplete="name"></div><div class="field"><label for="contract_email">Email для ответа *</label><input id="contract_email" name="contract_email" type="email" required autocomplete="email"></div><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="contracts-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Ориентировочная стоимость консалтинговых услуг</span><strong id="contracts-total" aria-live="polite">Выберите направление</strong><div id="contracts-breakdown"></div><input type="hidden" name="calculated_price" id="hiddenPrice"></div><p class="form-note">Объём работ и окончательную стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку на консультацию</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"></form></dialog><dialog id="documents-dialog" class="service-dialog" aria-labelledby="documents-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Экспертный отдел</span><h2 id="documents-title">Подготовка документации для подтверждения статуса производителя</h2><p>Заполните данные для заказа экспертного пакета документов под требования торговой сети.</p><form id="docsForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="docs">
+                <input type="hidden" name="form_type" value="Заявка на подготовку документации производителя">
+                
+
+                <div class="field">
+                    <label for="docs_company_name">1. Наименование ООО *</label>
+                    <input type="text" id="docs_company_name" name="company_name" placeholder="ООО «Агро-Стандарт»" required>
+                </div>
+
+                <div class="field">
+                    <label for="docs_supplier_status">2. Статус поставщика *</label>
+                    <select name="supplier_status" id="docs_supplier_status" required>
+                        <option value="" disabled selected>Выберите статус</option>
+                        <option value="Действующий поставщик">Действующий поставщик</option>
+                        <option value="Недействующий поставщик">Недействующий поставщик</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="docs_creation_year">3. Год создания компании *</label>
+                    <input type="number" id="docs_creation_year" name="creation_year" placeholder="Например: 2022" min="1900" required>
+                </div>
+
+                <div class="field">
+                    <label for="targetNetworkSelect">4. Для какой сети готовятся документы? *</label>
+                    <select name="target_network" id="targetNetworkSelect" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <option value="ДСК Пятёрочка">ДСК Пятёрочка</option>
+                        <option value="ТСХ Перекрёсток">ТСХ Перекрёсток</option>
+                        <option value="ТСЧ Чижик">ТСЧ Чижик</option>
+                        <option value="Все сети X5 Group">Все сети X5 Group</option>
+                        <option value="АО «Тандер»">АО «Тандер»</option>
+                        <option value="АО «АРВИАЙ»">АО «АРВИАЙ»</option><option value="Впрок">Впрок</option><option value="Другая сеть">Другая сеть</option>
+                    </select>
+                </div>
+
+                <div class="field" id="customNetworkBlock" style="display: none;">
+                    <label for="custom_network_name">Укажите название другой сети *</label>
+                    <input type="text" id="custom_network_name" name="custom_network_name" placeholder="Введите название...">
+                </div>
+
+                <div class="field">
+                    <label for="docs_client_phone">Контактный телефон (WhatsApp) *</label>
+                    <input type="tel" id="docs_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                <div class="field"><label for="docs_name">Ваше имя *</label><input id="docs_name" name="docs_name" type="text" required autocomplete="name"></div><div class="field"><label for="docs_email">Email для ответа *</label><input id="docs_email" name="docs_email" type="email" required autocomplete="email"></div><div class="field"><label for="documents-promo">Промокод</label><input id="documents-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="documents-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Итоговая стоимость услуг</span><strong id="documents-total" aria-live="polite">250 000 ₽</strong><input type="hidden" name="service_price" id="docsPrice"></div><p class="form-note">Состав экспертного пакета и условия работы согласуем после изучения задачи.</p><button type="submit" class="btn btn-primary" style="width: 100%;">Заказать подготовку документации</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"></form></dialog><dialog id="legal-dialog" class="service-dialog" aria-labelledby="legal-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Юридический отдел</span><h2 id="legal-title">Претензионная работа по заказам и штрафам с сетью</h2><p>Заполните параметры проблемного заказа и суть спора для подготовки юридического обращения.</p><form id="orderForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="order">
+                <input type="hidden" name="form_type" value="Претензионная работа / Споры с сетью">
+                
+
+                <div class="field">
+                    <label for="order_number">1. № заказа / претензии *</label>
+                    <input type="text" id="order_number" name="order_number" placeholder="Например: 12345678" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_date">2. Дата заказа / акта *</label>
+                    <input type="date" id="order_date" name="order_date" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_operation">3. Тип операции / процедуры *</label>
+                    <select name="order_operation" id="order_operation" required>
+                        <option value="" disabled selected>Выберите тип процедуры из списка</option>
+                        <option value="Оспаривание штрафов по SL/SLT и недопоставкам">Оспаривание штрафов по SL/SLT и недопоставкам</option>
+                        <option value="Формирование запроса в сеть на снятие блокировки по SL/SLT и по оплатам">Формирование запроса в сеть на снятие блокировки по SL/SLT и по оплатам</option>
+                        <option value="Согласование корректировок заказов и перепоставок">Согласование корректировок заказов и перепоставок</option>
+                        <option value="Досудебное урегулирование претензий ритейла">Досудебное урегулирование претензий ритейла</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="sap_company_number">4. SAP № Компании *</label>
+                    <input type="text" id="sap_company_number" name="sap_company_number" placeholder="Например: 0001234567" required>
+                </div>
+
+                <div class="field">
+                    <label for="retailNetworkSelect">5. Торговая сеть *</label>
+                    <select name="retail_network" id="retailNetworkSelect" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <option value="Перекрёсток">Перекрёсток</option>
+                        <option value="Пятёрочка">Пятёрочка</option>
+                        <option value="Чижик">Чижик</option>
+                        <option value="АО «Тандер» (Магнит)">АО «Тандер» (Магнит)</option>
+                        <option value="АО «АРВИАЙ»">АО «АРВИАЙ»</option><option value="Впрок">Впрок</option><option value="Свой вариант">Свой вариант</option>
+                    </select>
+                </div>
+
+                <div class="field" id="customRetailBlock" style="display: none;">
+                    <label for="custom_retail_name">Укажите название другой сети *</label>
+                    <input type="text" id="custom_retail_name" name="custom_retail_name" placeholder="Введите название...">
+                </div>
+
+                <div class="field">
+                    <label for="order_client_phone">6. Ваши контактные данные (Телефон / WhatsApp) *</label>
+                    <input type="tel" id="order_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_comments">7. Суть вопроса / Детали спора</label>
+                    <textarea id="order_comments" name="comments" rows="3" placeholder="Укажите причины разногласий, номера актов или коды позиций..."></textarea>
+                </div>
+
+                <div class="field"><label for="order_company_name">Наименование компании</label><input id="order_company_name" name="order_company_name" type="text" placeholder="ООО «Компания»"></div><div class="field"><label for="order_name">Ваше имя *</label><input id="order_name" name="order_name" type="text" required autocomplete="name"></div><div class="field"><label for="order_email">Email для ответа *</label><input id="order_email" name="order_email" type="email" required autocomplete="email"></div><div class="quote-box"><strong>Индивидуальная оценка</strong><span>Стоимость определим после изучения заказа, документов и сути спора.</span></div><button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 5px;">Отправить обращение в работу</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"></form></dialog><dialog id="management-dialog" class="service-dialog" aria-labelledby="management-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Услуги менеджмента</span><h2 id="management-title">Предоставление сотрудников и кадровая поддержка</h2><p>Предоставляем проверенный персонал и профессиональных менеджеров по продажам (KAM) в федеральные сети.</p><button type="button" class="btn btn-primary" data-management-contact>Связаться с нами</button></dialog>
+<footer>
     <div class="wrap footer-row">
       <div>© 2026 İSKET GROUP</div>
       <div>Сопровождение поставщиков и B2B-консалтинг</div>
@@ -1605,55 +1770,96 @@
 
 <script>
 (function(){
-  var $=function(id){return document.getElementById(id)};
-  var money=function(n){return n.toLocaleString('ru-RU')+' ₽'};
-  function quote(network,supplier,role,age,promo){
-    var base={chizhik:500000,perekrestok:600000,pyaterochka:750000,all:1650000}[network];
-    if(!base) return null;
-    var extras=(supplier==='new'?200000:0)+(role==='producer'?200000:0)+(age==='young'?100000:0);
-    var discount=promo.trim().toUpperCase()==='ISKET5'?.05:0;
-    return {base:base,extras:extras,discount:discount,total:Math.round((base+extras)*(1-discount))};
-  }
-  function promoStatus(id){
-    var code=$(id+'-promo').value.trim();
-    var valid=code.toUpperCase()==='ISKET5';
-    $(id+'-promo-status').textContent=code?(valid?'Промокод применён: скидка 5%.':'Промокод не найден. Расчёт без скидки.'):'';
-    return valid;
-  }
-  function update(){
-    var q=quote($('calc-network').value,$('calc-supplier').value,$('calc-role').value,$('calc-age').value,$('contracts-promo').value);
-    promoStatus('contracts');promoStatus('documents');
-    $('contracts-total').textContent='от '+money(q.total);
-    $('contracts-breakdown').textContent='Базовая стоимость: '+money(q.base)+(q.extras?' · Дополнительные условия: '+money(q.extras):'')+(q.discount?' · Скидка: 5%':'');
-    $('documents-total').textContent=money(promoStatus('documents')?237500:250000);
-  }
-  document.querySelectorAll('[data-open-service]').forEach(function(b){
-    b.addEventListener('click',function(){update();$(b.dataset.openService+'-dialog').showModal()});
-  });
-  document.querySelectorAll('.service-dialog').forEach(function(d){
-    d.querySelector('[data-close-dialog]').addEventListener('click',function(){d.close()});
-    d.addEventListener('click',function(e){if(e.target===d){var r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});
-    d.querySelectorAll('input,select').forEach(function(input){input.addEventListener('input',update)});
-  });
-  var previousSummary='';
-  document.querySelectorAll('[data-request-service]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var kind=b.dataset.requestService,service,summary;
-      var label=function(id){var s=$(id);return s.options[s.selectedIndex].text};
-      if(kind==='contracts'){
-        service={chizhik:'Выход в Чижик',perekrestok:'Выход в Перекрёсток',pyaterochka:'Выход в Пятёрочку',all:'Выход во все три сети'}[$('calc-network').value];
-        summary='Контракты: '+label('calc-network')+'; '+label('calc-supplier')+'; '+label('calc-category')+'; '+label('calc-role')+'; '+label('calc-age')+'. Регион: '+($('calc-region').value.trim()||'не указан')+'. Предварительный расчёт: '+$('contracts-total').textContent+($('contracts-promo').value.trim().toUpperCase()==='ISKET5'?' (ISKET5, скидка 5%)':'')+'.';
-      }else if(kind==='documents'){
-        service='Документы производителя';summary=service+'. Расчёт: '+$('documents-total').textContent+(promoStatus('documents')?' (ISKET5, скидка 5%)':'')+'.';
-      }else{service=kind==='legal'?'Штрафы и претензии':'KAM и специалисты';summary=service+': '+label(kind+'-task')+'. Стоимость — по индивидуальной оценке.'}
-      var message=$('message');var existing=message.value;
-      if(previousSummary) existing=existing.replace(previousSummary,'').trim();
-      message.value=(existing?existing+'\n\n':'')+summary;previousSummary=summary;
-      $('service').value=service;
-      $(kind+'-dialog').close();location.hash='contact';$('name').focus();
-    });
-  });
-  update();
+ var $=function(id){return document.getElementById(id)};
+ var money=function(n,c){return n.toLocaleString('ru-RU')+(c==='USD'?' $':' ₽')};
+ function quote(network,supplier,role,age,code){
+   var bases={'ТСЧ Чижик':500000,'ТСХ Перекресток':600000,'ДСК Пятерочка':750000,'Все три сети':1650000,ARVIAY_DIRECT:4000,ARVIAY_TECH:3500};
+   if(!bases[network])return null;
+   var usd=network.indexOf('ARVIAY_')===0;
+   var extras=usd?0:(supplier==='Недействующий поставщик'?200000:0)+(role==='Как производитель'?200000:0)+(age==='Менее 1 года'?100000:0);
+   var discount=code.trim().toUpperCase()==='ISKET5'?.05:0;
+   return {base:bases[network],extras:extras,currency:usd?'USD':'RUB',total:Math.round((bases[network]+extras)*(1-discount)*100)/100,discount:discount};
+ }
+ function promoStatus(prefix){
+   var code=$(prefix+'-promo').value.trim(),valid=code.toUpperCase()==='ISKET5';
+   $(prefix+'-promo-status').textContent=code?(valid?'Промокод применён: скидка 5%.':'Промокод не найден. Расчёт без скидки.'):'';
+   return valid;
+ }
+ function custom(select,block,input){
+   var show=$(select).value==='Другая сеть'||$(select).value==='Свой вариант';
+   $(block).style.display=show?'block':'none';$(input).required=show;$(input).disabled=!show;
+ }
+ function update(){
+   var network=$('retailTarget').value,usd=network.indexOf('ARVIAY_')===0;
+   $('contract-role-block').hidden=usd;$('entryRole').disabled=usd;
+   $('contract-import-info').hidden=!usd;
+   ['contract_product','contract_country'].forEach(function(id){$(id).disabled=!usd;$(id).required=usd});
+   $('supplierCategory').options[2].textContent=usd?'2.2 Недействующий поставщик':'2.2 Недействующий поставщик (+200 000 ₽)';
+   $('companyAge').options[2].textContent=usd?'Менее 1 года':'Менее 1 года (+100 000 ₽ к стоимости)';
+   var q=quote(network,$('supplierCategory').value,$('entryRole').value,$('companyAge').value,$('contracts-promo').value);
+   var complete=q&&(usd||($('supplierCategory').value&&$('companyAge').value));
+   $('contracts-total').textContent=q?(q.currency==='RUB'?'от ':'')+money(q.total,q.currency):'Выберите направление';
+   $('contracts-breakdown').textContent=q?'Базовая стоимость: '+money(q.base,q.currency)+(q.extras?' · Дополнительные условия: '+money(q.extras,q.currency):'')+(q.discount?' · Скидка: 5%':'')+(!complete?' · Заполните остальные параметры для полного расчёта.':''):'';
+   $('hiddenPrice').value=q?$('contracts-total').textContent:'';
+   promoStatus('contracts');
+   var docsDiscount=promoStatus('documents');
+   $('documents-total').textContent=money(docsDiscount?237500:250000,'RUB');$('docsPrice').value=$('documents-total').textContent;
+   custom('targetNetworkSelect','customNetworkBlock','custom_network_name');
+   custom('retailNetworkSelect','customRetailBlock','custom_retail_name');
+ }
+ document.querySelectorAll('[data-open-service]').forEach(function(b){
+   b.addEventListener('click',function(){
+     var kind=b.dataset.openService;
+     var prefix={contracts:'contract',documents:'docs',legal:'order'}[kind];
+     if(prefix){
+       ['name','email'].forEach(function(field){var target=$(prefix+'_'+field);if(!target.value)target.value=$(field).value});
+       var phone=$(prefix+'_client_phone');if(!phone.value)phone.value=$('phone').value;
+       var company=$(prefix+'_company_name');if(!company.value)company.value=$('company').value;
+     }
+     update();$(kind+'-dialog').showModal();
+     if(typeof ym==='function')ym(113582962,'reachGoal','service_select',{service:kind,source:'details'});
+   });
+ });
+ document.querySelectorAll('.service-dialog').forEach(function(d){
+   d.querySelector('[data-close-dialog]').addEventListener('click',function(){d.close()});
+   d.addEventListener('click',function(e){if(e.target===d){var r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}});
+   d.querySelectorAll('input,select').forEach(function(el){el.addEventListener('input',update);el.addEventListener('change',update)});
+ });
+ $('docs_creation_year').max=String(new Date().getFullYear());
+ document.querySelector('[data-management-contact]').addEventListener('click',function(){$('service').value='KAM и специалисты';$('management-dialog').close();location.hash='contact';$('name').focus()});
+ var serviceForNetwork={'ТСЧ Чижик':'Выход в Чижик','ТСХ Перекресток':'Выход в Перекрёсток','ДСК Пятерочка':'Выход в Пятёрочку','Все три сети':'Выход во все три сети',ARVIAY_DIRECT:'АО «АРВИАЙ» — прямой импорт',ARVIAY_TECH:'АО «АРВИАЙ» — технический импорт'};
+ var crm='https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
+ document.querySelectorAll('[data-service-form]').forEach(function(form){
+   form.addEventListener('submit',function(){
+     update();
+     var kind=form.dataset.serviceForm,summary,service;
+     var selected=function(id){var el=$(id);return el.options[el.selectedIndex].textContent};
+     if(kind==='contract'){
+       service=serviceForNetwork[$('retailTarget').value];
+       summary='Направление: '+service+'; статус: '+selected('supplierCategory')+'; компания: '+selected('companyCategory')+'; возраст: '+selected('companyAge')+'; регион: '+$('contract_sales_region').value+'. ';
+       if($('retailTarget').value.indexOf('ARVIAY_')===0)summary+='Продукция: '+$('contract_product').value+'; страна поставки: '+$('contract_country').value+'. ';
+       else summary+='Выход: '+selected('entryRole')+'. ';
+       summary+='Ориентировочная стоимость: '+$('contracts-total').textContent+($('contracts-promo').value.trim().toUpperCase()==='ISKET5'?' (ISKET5, скидка 5%)':'')+'.';
+       form.querySelector('[name=form_type]').value='Заявка: '+service;
+     }else if(kind==='docs'){
+       service='Документы производителя';summary='Документы: '+($('targetNetworkSelect').value==='Другая сеть'?$('custom_network_name').value:selected('targetNetworkSelect'))+'; статус поставщика: '+selected('docs_supplier_status')+'; год создания: '+$('docs_creation_year').value+'. Стоимость: '+$('documents-total').textContent+(promoStatus('documents')?' (ISKET5, скидка 5%)':'')+'.';
+     }else{
+       service='Штрафы и претензии';summary='Заказ / претензия: '+$('order_number').value+'; дата: '+$('order_date').value+'; процедура: '+selected('order_operation')+'; SAP: '+$('sap_company_number').value+'; сеть: '+($('retailNetworkSelect').value==='Свой вариант'?$('custom_retail_name').value:selected('retailNetworkSelect'))+'. Суть вопроса: '+$('order_comments').value;
+     }
+     form.querySelector('[name=service]').value=service;
+     form.querySelector('[name=company]').value=$(kind+'_company_name').value;
+     form.querySelector('[name=phone]').value=$(kind+'_client_phone').value;
+     form.querySelector('[name=message]').value=summary;
+     // Standard names keep the same CRM mapping as the main contact form.
+     var name=$(kind+'_name'),email=$(kind+'_email');name.name='name';email.name='email';
+     form.querySelector('[name=request_id]').value='ISKET-'+Date.now().toString(36).toUpperCase()+'-'+Math.random().toString(36).slice(2,8).toUpperCase();
+     try{
+       fetch(crm,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},body:new URLSearchParams(new FormData(form)).toString()}).catch(function(){});
+     }catch(error){}
+     if(typeof ym==='function')ym(113582962,'reachGoal','form_submit',{service:service});
+   });
+ });
+ update();
 })();
 </script>
 </body>
