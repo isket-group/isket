@@ -31,12 +31,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    .language-bar{background:#fff;border-bottom:1px solid #e4ece7;padding:7px 0}
-    .language-bar .wrap{display:flex;justify-content:flex-end;gap:6px;flex-wrap:wrap}
-    .language-bar button{border:1px solid #e4ece7;background:#fff;border-radius:8px;padding:6px 10px;cursor:pointer;color:#0f5132;font-size:12px;font-weight:600}
-    .language-bar button[aria-pressed="true"]{background:#0f5132;color:#fff;border-color:#0f5132}
-    .language-bar button:focus-visible{outline:3px solid #16834b;outline-offset:2px}
-    @media(max-width:600px){.language-bar .wrap{justify-content:center}.service-card h3{overflow-wrap:anywhere}}
+    .language-bar{background:#fff;border-bottom:1px solid #e4ece7;padding:2px 0}
+    .language-bar .wrap{display:flex;justify-content:flex-end;align-items:center;gap:3px}
+    .language-label{font-size:11px;color:#64776c;margin-right:5px}
+    .language-bar button{display:grid;place-items:center;width:36px;height:32px;padding:4px;border:1px solid transparent;background:transparent;border-radius:7px;cursor:pointer;color:#0f5132;font-size:20px;line-height:1}
+    .language-bar button[aria-pressed="true"]{background:#edf6f0;border-color:#b9d6c5}
+    .language-bar button:focus-visible,.menu-toggle:focus-visible{outline:2px solid #16834b;outline-offset:2px}
+    .menu-toggle{display:none}
+    @media(max-width:600px){.service-card h3{overflow-wrap:anywhere}}
     .status-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff}
     .status-card h2{margin:12px 0;font-size:28px}.status-card p{color:var(--muted)}.status-card form{padding:0;border:0;box-shadow:none}
     #status-result{margin:16px 0;font-weight:600}.delivery-feedback{margin-top:20px;border:1px solid var(--line);padding:16px;border-radius:12px;background:var(--green-soft)}
@@ -972,41 +974,15 @@
     }
 
     @media (max-width:980px){
-      .nav{
-        flex-wrap:wrap;
-        column-gap:16px;
-        row-gap:0;
-        padding-top:12px;
-      }
-
-      .nav-links{
-        display:grid;
-        grid-template-columns:repeat(3,minmax(0,1fr));
-        order:3;
-        flex:0 0 100%;
-        gap:4px 8px;
-        padding:10px 0;
-        margin-top:12px;
-        border-top:1px solid var(--line);
-        font-size:12px;
-      }
-
-      .nav-links a{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        min-height:44px;
-        padding:8px 6px;
-        border-radius:8px;
-        background:var(--green-soft);
-        text-align:center;
-        line-height:1.35;
-        overflow-wrap:anywhere;
-      }
-
-      .nav-links a::after{bottom:3px;left:12px;right:12px;}
-      .nav-links a:focus-visible{outline:2px solid var(--green);outline-offset:2px;}
-      main > section[id]{scroll-margin-top:210px;}
+      .nav{position:relative;min-height:64px;gap:12px;}
+      .menu-toggle{display:grid;place-items:center;order:3;flex:0 0 44px;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--green);cursor:pointer}
+      .nav-actions{margin-left:auto}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:0 0 16px 16px;box-shadow:0 14px 24px rgba(15,56,34,.12);font-size:13px;max-height:70vh;overflow:auto}
+      header.menu-open .nav-links{display:grid}
+      .nav-links a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:8px;background:var(--green-soft);line-height:1.4;overflow-wrap:anywhere}
+      .nav-links a::after{display:none}
+      .nav-links a:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+      main > section[id]{scroll-margin-top:84px;}
 
       .hero-grid,
       .allin-grid,
@@ -1028,10 +1004,9 @@
         padding:66px 0;
       }
 
-      .nav{
-        min-height:68px;
-        gap:12px;
-      }
+      .nav{min-height:60px;gap:12px;}
+      .nav-actions{display:none;}
+      .menu-toggle{margin-left:auto;}
 
       .brand-sub{
         display:none;
@@ -1130,7 +1105,7 @@
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/113582962" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
-  <div class="language-bar"><div class="wrap" role="group" aria-label="Language / Язык / Dil"><button type="button" data-language="ru" aria-pressed="true">Русский Язык</button><button type="button" data-language="tr" aria-pressed="false">Türk Dili</button><button type="button" data-language="en" aria-pressed="false">English</button></div></div>
+  <div class="language-bar"><div class="wrap" role="group" aria-label="Language / Язык / Dil"><span class="language-label">Language</span><button type="button" data-language="ru" aria-label="Русский" title="Русский" aria-pressed="true"><span aria-hidden="true">🇷🇺</span></button><button type="button" data-language="tr" aria-label="Türkçe" title="Türkçe" aria-pressed="false"><span aria-hidden="true">🇹🇷</span></button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><span aria-hidden="true">🇬🇧</span></button></div></div>
   <header>
     <div class="wrap nav">
       <a href="#top" class="brand" aria-label="İSKET GROUP — на главную">
@@ -1143,7 +1118,7 @@
         </span>
       </a>
 
-      <nav class="nav-links">
+      <nav class="nav-links" id="site-navigation">
         <a href="#services">Услуги и цены</a>
         <a href="#allin">Сопровождение</a>
         <a href="#cases">Кейсы</a>
@@ -1151,6 +1126,7 @@
         <a href="#contact">Контакты</a><a href="#request-status">Статус заявки</a>
       </nav>
 
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
       <div class="nav-actions">
         <a class="mini-link" href="https://wa.me/905306610835" target="_blank" rel="noopener">
           <small>WhatsApp</small>
@@ -2046,5 +2022,18 @@
 })();
 </script>
 
+<script id="compact-navigation">
+(function(){
+  var header=document.querySelector('header'),button=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
+  function label(){var lang=document.documentElement.lang;var opened=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-label',lang==='tr'?(opened?'Menüyü kapat':'Menüyü aç'):lang==='en'?(opened?'Close menu':'Open menu'):(opened?'Закрыть меню':'Открыть меню'));}
+  function setOpen(open){header.classList.toggle('menu-open',open);button.setAttribute('aria-expanded',String(open));label();}
+  button.addEventListener('click',function(){setOpen(button.getAttribute('aria-expanded')!=='true');});
+  nav.addEventListener('click',function(event){if(event.target.closest('a'))setOpen(false);});
+  document.addEventListener('click',function(event){if(!header.contains(event.target))setOpen(false);});
+  document.addEventListener('keydown',function(event){if(event.key==='Escape'&&button.getAttribute('aria-expanded')==='true'){setOpen(false);button.focus();}});
+  window.addEventListener('resize',function(){if(window.innerWidth>980)setOpen(false);});
+  window.addEventListener('isket-language-change',label);label();
+})();
+</script>
 </body>
 </html>
