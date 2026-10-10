@@ -1080,6 +1080,7 @@
 .service-dialog .btn{margin-top:12px}.promo-status{font-size:13px;min-height:20px}
 @media(max-width:600px){#services .services,.calculator-grid{grid-template-columns:1fr}.service-dialog{padding:24px 18px}.service-dialog h2{font-size:24px}}
 
+.rub-equivalent{display:block;color:var(--muted);font-size:14px;line-height:1.5}.quote-box .rub-equivalent{font-size:22px;font-weight:700;color:var(--green)}.quote-box .rate-note{font-size:12px;line-height:1.6;color:var(--muted)}
 .service-dialog form{padding:0;border:0;box-shadow:none;background:none}.service-dialog h2{margin-top:14px}.service-dialog [hidden]{display:none!important}.service-dialog .field{margin:16px 0}.service-dialog button[type=submit]{width:100%}
 </style>
 </head>
@@ -1211,7 +1212,7 @@
       </div>
     </section>
 
-    <section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow"><span class="dot"></span> наши услуги</span><h2>Выберите задачу — остальное уточним</h2><p>Четыре направления поддержки поставщиков. Откройте подробности, чтобы узнать состав услуги и рассчитать стоимость.</p></div><div class="services"><article class="service-card"><span class="service-tag">Департамент контрактов</span><h3>Контракты и импорт</h3><p>Сопровождение работы с X5 Group и импорт через АО «АРВИАЙ». Выберите направление и рассчитайте стоимость.</p><div class="service-price">от 500 000 ₽</div><p>Импорт: 3 500–4 000 $</p><button type="button" class="btn btn-green" data-open-service="contracts">Рассчитать контракт</button></article>
+    <section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow"><span class="dot"></span> наши услуги</span><h2>Выберите задачу — остальное уточним</h2><p>Четыре направления поддержки поставщиков. Откройте подробности, чтобы узнать состав услуги и рассчитать стоимость.</p></div><div class="services"><article class="service-card"><span class="service-tag">Департамент контрактов</span><h3>Контракты и импорт</h3><p>Сопровождение работы с X5 Group и импорт через АО «АРВИАЙ». Выберите направление и рассчитайте стоимость.</p><div class="service-price">от 500 000 ₽</div><p>Импорт: 3 500–4 000 $</p><small id="import-rub-range" class="rub-equivalent" aria-live="polite">Загружаем курс ЦБ РФ…</small><button type="button" class="btn btn-green" data-open-service="contracts">Рассчитать контракт</button></article>
 <article class="service-card"><span class="service-tag">Экспертный отдел</span><h3>Документы производителя</h3><p>Юридический и технический пакет для подтверждения статуса производителя и самостоятельного прохождения комплаенс-аудита.</p><div class="service-price">250 000 ₽</div><button type="button" class="btn btn-green" data-open-service="documents">Рассчитать и оставить заявку</button></article>
 <article class="service-card"><span class="service-tag">Юридический отдел</span><h3>Штрафы и претензии</h3><p>Претензии, акты разногласий и официальные письма по заказам, штрафам, блокировкам и оплатам.</p><div class="service-price">Индивидуально</div><button type="button" class="btn btn-green" data-open-service="legal">Описать ситуацию</button></article>
 <article class="service-card"><span class="service-tag">Услуги менеджмента</span><h3>Продажи и работа с X5 Group</h3><p>Подбор KAM и профильных специалистов для работы с торговыми сетями и усиления вашей команды.</p><div class="service-price">По запросу</div><button type="button" class="btn btn-green" data-open-service="management">Подробнее о специалистах</button></article></div></div></section>
@@ -1538,7 +1539,7 @@
                 </div>
 
                 
-                <div class="field"><label for="contract_name">Ваше имя *</label><input id="contract_name" name="contract_name" type="text" required autocomplete="name"></div><div class="field"><label for="contract_email">Email для ответа *</label><input id="contract_email" name="contract_email" type="email" required autocomplete="email"></div><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="contracts-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Ориентировочная стоимость консалтинговых услуг</span><strong id="contracts-total" aria-live="polite">Выберите направление</strong><div id="contracts-breakdown"></div><input type="hidden" name="calculated_price" id="hiddenPrice"></div><p class="form-note">Объём работ и окончательную стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку на консультацию</button>
+                <div class="field"><label for="contract_name">Ваше имя *</label><input id="contract_name" name="contract_name" type="text" required autocomplete="name"></div><div class="field"><label for="contract_email">Email для ответа *</label><input id="contract_email" name="contract_email" type="email" required autocomplete="email"></div><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="contracts-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Ориентировочная стоимость консалтинговых услуг</span><strong id="contracts-total" aria-live="polite">Выберите направление</strong><div id="contracts-rub" class="rub-equivalent" aria-live="polite" hidden></div><div id="currency-rate-info" class="rate-note" hidden></div><div id="contracts-breakdown"></div><input type="hidden" name="calculated_price" id="hiddenPrice"></div><p class="form-note">Объём работ и окончательную стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку на консультацию</button>
             <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog><dialog id="documents-dialog" class="service-dialog" aria-labelledby="documents-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Экспертный отдел</span><h2 id="documents-title">Подготовка документации для подтверждения статуса производителя</h2><p>Заполните данные для заказа экспертного пакета документов под требования торговой сети.</p><form id="docsForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="docs">
                 <input type="hidden" name="form_type" value="Заявка на подготовку документации производителя">
                 
@@ -1647,7 +1648,7 @@
             <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog><dialog id="management-dialog" class="service-dialog" aria-labelledby="management-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Услуги менеджмента</span><h2 id="management-title">Предоставление сотрудников и кадровая поддержка</h2><p>Предоставляем проверенный персонал и профессиональных менеджеров по продажам (KAM) в федеральные сети.</p><button type="button" class="btn btn-primary" data-management-contact>Связаться с нами</button></dialog>
 <footer>
     <div class="wrap footer-row">
-      <div>© 2026 İSKET GROUP</div>
+      <div>© 2026 İSKET GROUP</div><a href="https://www.cbr-xml-daily.ru/" target="_blank" rel="noopener">API для курсов ЦБ РФ</a>
       <div>Сопровождение поставщиков и B2B-консалтинг</div>
     </div>
   </footer>
@@ -1789,6 +1790,56 @@
    var show=$(select).value==='Другая сеть'||$(select).value==='Свой вариант';
    $(block).style.display=show?'block':'none';$(input).required=show;$(input).disabled=!show;
  }
+
+ var fxRate=null,fxUnavailable=false,fxCached=false;
+ var FX_KEY='isket-cbr-usd-v1',FX_TTL=6*60*60*1000;
+ function moscowDay(date){
+   var parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Moscow',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);
+   var values={};parts.forEach(function(p){values[p.type]=p.value});return values.year+'-'+values.month+'-'+values.day;
+ }
+ function validRate(rate){
+   return rate&&Number.isFinite(rate.value)&&rate.value>0&&rate.value<1000000&&/^\d{4}-\d{2}-\d{2}$/.test(rate.day)&&rate.day<=moscowDay(new Date());
+ }
+ function readRate(data){
+   var usd=data&&data.Valute&&data.Valute.USD;
+   if(!usd||!Number.isFinite(Number(usd.Nominal))||Number(usd.Nominal)<=0)throw Error('Invalid rate');
+   var date=new Date(data.Date);if(!Number.isFinite(date.getTime()))throw Error('Invalid date');
+   var day=moscowDay(date),value=Number(usd.Value)/Number(usd.Nominal);
+   if(day>moscowDay(new Date())){
+     date=new Date(data.PreviousDate);if(!Number.isFinite(date.getTime()))throw Error('Invalid previous date');
+     day=moscowDay(date);value=Number(usd.Previous)/Number(usd.Nominal);
+   }
+   var rate={value:value,day:day};if(!validRate(rate))throw Error('Invalid effective rate');return rate;
+ }
+ function formatRateDay(day){var p=day.split('-');return p[2]+'.'+p[1]+'.'+p[0]}
+ function renderFx(q){
+   var price=$('contracts-rub'),info=$('currency-rate-info'),range=$('import-rub-range');
+   var usd=q&&q.currency==='USD';price.hidden=!usd;info.hidden=!usd;
+   if(!fxRate){
+     var status=fxUnavailable?'Рублёвый эквивалент временно недоступен.':'Загружаем курс ЦБ РФ…';
+     range.textContent=status;if(usd){price.textContent=status;info.textContent='Стоимость услуги указана в долларах США.'}return;
+   }
+   var rub=function(amount){return Math.round(amount*fxRate.value).toLocaleString('ru-RU')+' ₽'};
+   var rateLabel=(fxCached?'Последний загруженный курс ЦБ РФ':'Курс ЦБ РФ')+' на '+formatRateDay(fxRate.day)+': 1 $ = '+fxRate.value.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:4})+' ₽.';
+   range.textContent='≈ '+rub(3500)+'–'+rub(4000)+' · на '+formatRateDay(fxRate.day)+(fxCached?' · сохранённый курс':'');
+   if(usd){price.textContent='≈ '+rub(q.total);info.textContent=rateLabel+' Справочный пересчёт; условия оплаты согласуем в договоре.'}
+ }
+ async function refreshRate(){
+   if(document.hidden)return;
+   var saved=null;try{saved=JSON.parse(localStorage.getItem(FX_KEY)||'null')}catch(error){}
+   if(saved&&validRate(saved.rate)){
+     fxRate=saved.rate;fxCached=true;update();
+     if(saved.checkedDay===moscowDay(new Date())&&Number.isFinite(saved.checkedAt)&&saved.checkedAt<=Date.now()&&Date.now()-saved.checkedAt<FX_TTL){fxCached=false;update();return}
+   }
+   var controller=new AbortController(),timeout=setTimeout(function(){controller.abort()},10000);
+   try{
+     var response=await fetch('https://www.cbr-xml-daily.ru/daily_json.js',{signal:controller.signal,cache:'no-cache'});
+     if(!response.ok)throw Error('Rate source unavailable');
+     fxRate=readRate(await response.json());fxUnavailable=false;fxCached=false;
+     try{localStorage.setItem(FX_KEY,JSON.stringify({rate:fxRate,checkedDay:moscowDay(new Date()),checkedAt:Date.now()}))}catch(error){}
+   }catch(error){fxUnavailable=true;fxCached=!!fxRate}
+   finally{clearTimeout(timeout);update()}
+ }
  function update(){
    var network=$('retailTarget').value,usd=network.indexOf('ARVIAY_')===0;
    $('contract-role-block').hidden=usd;$('entryRole').disabled=usd;
@@ -1801,6 +1852,7 @@
    $('contracts-total').textContent=q?(q.currency==='RUB'?'от ':'')+money(q.total,q.currency):'Выберите направление';
    $('contracts-breakdown').textContent=q?'Базовая стоимость: '+money(q.base,q.currency)+(q.extras?' · Дополнительные условия: '+money(q.extras,q.currency):'')+(q.discount?' · Скидка: 5%':'')+(!complete?' · Заполните остальные параметры для полного расчёта.':''):'';
    $('hiddenPrice').value=q?$('contracts-total').textContent:'';
+   renderFx(q);
    promoStatus('contracts');
    var docsDiscount=promoStatus('documents');
    $('documents-total').textContent=money(docsDiscount?237500:250000,'RUB');$('docsPrice').value=$('documents-total').textContent;
@@ -1840,6 +1892,7 @@
        if($('retailTarget').value.indexOf('ARVIAY_')===0)summary+='Продукция: '+$('contract_product').value+'; страна поставки: '+$('contract_country').value+'. ';
        else summary+='Выход: '+selected('entryRole')+'. ';
        summary+='Ориентировочная стоимость: '+$('contracts-total').textContent+($('contracts-promo').value.trim().toUpperCase()==='ISKET5'?' (ISKET5, скидка 5%)':'')+'.';
+       if($('retailTarget').value.indexOf('ARVIAY_')===0&&fxRate)summary+=' Справочный эквивалент: '+$('contracts-rub').textContent+'. '+$('currency-rate-info').textContent;
        form.querySelector('[name=form_type]').value='Заявка: '+service;
      }else if(kind==='docs'){
        service='Документы производителя';summary='Документы: '+($('targetNetworkSelect').value==='Другая сеть'?$('custom_network_name').value:selected('targetNetworkSelect'))+'; статус поставщика: '+selected('docs_supplier_status')+'; год создания: '+$('docs_creation_year').value+'. Стоимость: '+$('documents-total').textContent+(promoStatus('documents')?' (ISKET5, скидка 5%)':'')+'.';
@@ -1860,6 +1913,9 @@
    });
  });
  update();
+ refreshRate();
+ setInterval(refreshRate,60*60*1000);
+ document.addEventListener('visibilitychange',function(){if(!document.hidden)refreshRate()});
 })();
 </script>
 </body>
