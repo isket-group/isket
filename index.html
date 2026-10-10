@@ -37,6 +37,7 @@
     .language-bar button{display:grid;place-items:center;width:36px;height:32px;padding:4px;border:1px solid transparent;background:transparent;border-radius:7px;cursor:pointer;color:#0f5132;font-size:20px;line-height:1}
     .language-bar button[aria-pressed="true"]{background:#edf6f0;border-color:#b9d6c5}
     .language-bar button:focus-visible,.menu-toggle:focus-visible{outline:2px solid #16834b;outline-offset:2px}
+    .language-bar svg{display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
     .menu-toggle{display:none}
     @media(max-width:600px){.service-card h3{overflow-wrap:anywhere}}
     .status-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff}
@@ -1105,7 +1106,7 @@
 <body>
   <noscript><div><img src="https://mc.yandex.ru/watch/113582962" style="position:absolute; left:-9999px;" alt=""></div></noscript>
 
-  <div class="language-bar"><div class="wrap" role="group" aria-label="Language / Язык / Dil"><span class="language-label">Language</span><button type="button" data-language="ru" aria-label="Русский" title="Русский" aria-pressed="true"><span aria-hidden="true">🇷🇺</span></button><button type="button" data-language="tr" aria-label="Türkçe" title="Türkçe" aria-pressed="false"><span aria-hidden="true">🇹🇷</span></button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><span aria-hidden="true">🇬🇧</span></button></div></div>
+  <div class="language-bar"><div class="wrap" role="group" aria-label="Language / Язык / Dil"><span class="language-label">Language</span><button type="button" data-language="ru" aria-label="Русский" title="Русский" aria-pressed="true"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg></button><button type="button" data-language="tr" aria-label="Türkçe" title="Türkçe" aria-pressed="false"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#e30a17" d="M0 0h30v20H0z"/><circle fill="#fff" cx="12" cy="10" r="5"/><circle fill="#e30a17" cx="13.3" cy="10" r="4"/><path fill="#fff" d="m18.6 6.8.75 2.4h2.5l-2 1.5.75 2.4-2-1.5-2 1.5.75-2.4-2-1.5h2.5z"/></svg></button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#012169" d="M0 0h30v20H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 30 20M30 0 0 20"/><path stroke="#c8102e" stroke-width="1.6" d="m0 0 30 20M30 0 0 20"/><path stroke="#fff" stroke-width="6" d="M15 0v20M0 10h30"/><path stroke="#c8102e" stroke-width="3.5" d="M15 0v20M0 10h30"/></svg></button></div></div>
   <header>
     <div class="wrap nav">
       <a href="#top" class="brand" aria-label="İSKET GROUP — на главную">
