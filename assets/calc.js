@@ -108,7 +108,7 @@
    d.querySelectorAll('input,select').forEach(function(el){el.addEventListener('input',update);el.addEventListener('change',update)});
  });
  $('docs_creation_year').max=String(new Date().getFullYear());
- document.querySelector('[data-management-contact]').addEventListener('click',function(){$('service').value='KAM и специалисты';$('management-dialog').close();location.hash='contact';$('name').focus()});
+ var mc=document.querySelector('[data-management-contact]');if(mc)mc.addEventListener('click',function(){$('service').value='KAM и специалисты';$('management-dialog').close();location.hash='contact';$('name').focus()});
  var serviceForNetwork={'ТСЧ Чижик':'Выход в Чижик','ТСХ Перекресток':'Выход в Перекрёсток','ДСК Пятерочка':'Выход в Пятёрочку',MAGNIT:'Выход в Магнит / АО «Тандер»','Все три сети':'Выход во все три сети',TANDER_DIRECT:'АО «Тандер» — прямой импорт',ARVIAY_DIRECT:'АО «АРВИАЙ» — прямой импорт',ARVIAY_TECH:'АО «АРВИАЙ» — технический импорт'};
  var crm='https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
  document.querySelectorAll('[data-service-form]').forEach(function(form){

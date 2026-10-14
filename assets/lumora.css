@@ -228,3 +228,23 @@ html.lenis,html.lenis body{height:auto}
 .how-steps li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
 .how-steps b{font-weight:500;font-size:12px;color:var(--accent);letter-spacing:.08em}
 @media(min-width:981px) and (max-width:1240px){.nav-links{gap:14px;font-size:10.5px}.header-cta{padding:0 14px}}
+
+/* ---------- Страница заявки ---------- */
+.apply{padding-top:40px}
+.apply-lead{color:var(--muted);font-size:15px;max-width:640px;margin-bottom:24px;line-height:1.7}
+.apply-tabs{display:flex;gap:6px;border:1px solid var(--line);border-radius:999px;padding:5px;width:fit-content;max-width:100%;overflow-x:auto;margin-bottom:28px;scrollbar-width:none}
+.apply-tabs::-webkit-scrollbar{display:none}
+.apply-tabs button{font:inherit;font-size:13px;border:0;border-radius:999px;background:transparent;color:var(--muted);padding:12px 20px;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+.apply-tabs button:hover{color:var(--ink)}
+.apply-tabs button.on{background:#0a0a0a;color:#fff}
+.apply-panel{display:none!important}
+.apply-panel.active{display:block!important;animation:panelIn .6s var(--ease) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+dialog.apply-panel.active{position:static!important;inset:auto!important;width:100%!important;max-width:none!important;max-height:none!important;margin:0!important;box-shadow:none!important;border:1px solid var(--line)!important;border-radius:28px!important;padding:clamp(24px,4vw,48px)!important;background:#fff;overflow:visible}
+dialog.apply-panel .dialog-close{display:none}
+.apply-general{border:1px solid var(--line);border-radius:28px;padding:clamp(24px,4vw,48px);background:#fff}
+.apply-general h2{font-size:clamp(26px,3vw,38px);letter-spacing:-.045em;margin:14px 0 10px}
+.apply-general>p{color:var(--muted);max-width:620px;margin-bottom:20px}
+.apply-general form{max-width:640px}
+.contact-actions{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:26px}
+.footer-nav a[href="apply.html"]{font-weight:600}
