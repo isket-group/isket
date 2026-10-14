@@ -213,3 +213,18 @@ html.lenis,html.lenis body{height:auto}
 @media(max-width:560px){.home-svc-grid{grid-template-columns:1fr}.home-svc{min-height:0}.cta-band{padding:56px 0;border-radius:24px 24px 0 0}.page-head{padding-top:36px}}
 .nav-links a{white-space:nowrap}
 @media(min-width:981px){.nav-links{gap:clamp(14px,1.8vw,26px)}}
+
+/* ---------- Финальные дополнения ---------- */
+.footer-nav{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13px;width:100%}
+.footer-nav a{color:inherit;text-decoration:none;opacity:.9;border-bottom:1px solid transparent;transition:border-color .3s,opacity .3s}
+.footer-nav a:hover{opacity:1;border-color:currentColor}
+.more-fields{margin:4px 0 14px;border:1px solid var(--line);border-radius:16px;padding:0 16px;background:#faf9f4}
+.more-fields>summary{cursor:pointer;list-style:none;padding:14px 0;font-size:13px;font-weight:500;color:var(--ink);display:flex;justify-content:space-between;align-items:center}
+.more-fields>summary::-webkit-details-marker{display:none}
+.more-fields>summary::after{content:"+";font-size:20px;line-height:1;color:var(--accent);transition:transform .35s var(--ease)}
+.more-fields[open]>summary::after{transform:rotate(45deg)}
+.more-fields .field:last-child{margin-bottom:16px}
+.how-steps{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--line)}
+.how-steps li{display:flex;gap:18px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink)}
+.how-steps b{font-weight:500;font-size:12px;color:var(--accent);letter-spacing:.08em}
+@media(min-width:981px) and (max-width:1240px){.nav-links{gap:14px;font-size:10.5px}.header-cta{padding:0 14px}}
