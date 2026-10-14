@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Yandex.Metrika: запускается только после согласия на cookie -->
+  <script>
+    (function(m,e,t,r,i){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      window.isketLoadMetrika=function(){
+        if(window.__ymLoaded)return;window.__ymLoaded=true;
+        var k=e.createElement(t),a=e.getElementsByTagName(t)[0];
+        k.async=1;k.src=r;a.parentNode.insertBefore(k,a);
+        ym(113582962,'init',{clickmap:true,trackLinks:true,accurateTrackBounce:true});
+      };
+      try{if(localStorage.getItem('isket-cookie')==='accepted')window.isketLoadMetrika();}catch(error){}
+    })(window,document,'script','https://mc.yandex.ru/metrika/tag.js','ym');
+  </script>
+  <!-- /Yandex.Metrika -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function(){var d=document.documentElement;try{
+      var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if(!rm&&'IntersectionObserver' in window){d.classList.add('js');
+        if(!sessionStorage.getItem('isket-intro')&&!location.hash){d.classList.add('loading');sessionStorage.setItem('isket-intro','1')}}
+    }catch(e){}})();
+  </script>
+
+  <title>Услуги и цены — İSKET GROUP</title>
+  <meta name="description" content="Сопровождение производителей, трейдеров и импортёров фруктов, овощей, орехов и сухофруктов: документы, договоры с торговыми сетями РФ, претензии и комплексный запуск.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Услуги и цены — İSKET GROUP">
+  <meta property="og:description" content="Помогаем новым и действующим поставщикам фруктов, овощей, орехов и сухофруктов готовить документы, заключать договоры и решать проблемы в работе с торговыми сетями.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    .language-bar{background:#fff;border-bottom:1px solid #e4ece7;padding:2px 0}
+    .language-bar .wrap{display:flex;justify-content:flex-end;align-items:center;gap:3px}
+    .language-label{font-size:11px;color:#64776c;margin-right:5px}
+    .language-bar button{display:grid;place-items:center;width:36px;height:32px;padding:4px;border:1px solid transparent;background:transparent;border-radius:7px;cursor:pointer;color:#0f5132;font-size:20px;line-height:1}
+    .language-bar button[aria-pressed="true"]{background:#edf6f0;border-color:#b9d6c5}
+    .language-bar button:focus-visible,.menu-toggle:focus-visible{outline:2px solid #16834b;outline-offset:2px}
+    .language-bar svg{display:block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.08)}
+    .menu-toggle{display:none}
+    @media(max-width:600px){.service-card h3{overflow-wrap:anywhere}}
+    .status-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff}
+    .status-card h2{margin:12px 0;font-size:28px}.status-card p{color:var(--muted)}.status-card form{padding:0;border:0;box-shadow:none}
+    #status-result{margin:16px 0;font-weight:600}.delivery-feedback{margin-top:20px;border:1px solid var(--line);padding:16px;border-radius:12px;background:var(--green-soft)}
+    .delivery-feedback input{font-size:12px;width:100%;margin-top:8px;overflow-wrap:anywhere}.delivery-feedback label{display:block;margin-top:12px}.status-card small{display:block;color:var(--muted)}
+    @media(max-width:700px){.status-card{grid-template-columns:1fr;padding:20px;gap:16px}.status-card h2{font-size:24px}}
+    :root{
+      --green:#0f5132;
+      --green-2:#16834b;
+      --green-soft:#edf7f1;
+      --red:#d92d20;
+      --red-dark:#b42318;
+      --text:#1f2a24;
+      --muted:#66756d;
+      --bg:#f7faf8;
+      --white:#ffffff;
+      --line:#e4ece7;
+      --shadow:0 18px 50px rgba(15,56,34,.08);
+      --radius:20px;
+      --radius-sm:14px;
+      --max:1180px;
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input,
+    select,
+    textarea{
+      font:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .wrap{
+      width:min(92%,var(--max));
+      margin:0 auto;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:7px 11px;
+      border-radius:999px;
+      background:var(--green-soft);
+      color:var(--green-2);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .dot{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--green-2);
+    }
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-head{
+      max-width:760px;
+      margin-bottom:38px;
+    }
+
+    .section-head.center{
+      margin-left:auto;
+      margin-right:auto;
+      text-align:center;
+    }
+
+    .section h2{
+      margin-top:14px;
+      font-size:clamp(32px,4vw,52px);
+      line-height:1.08;
+      letter-spacing:-.035em;
+      color:#0e2f20;
+    }
+
+    .section-head p{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:48px;
+      padding:0 20px;
+      border:none;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:var(--red);
+      box-shadow:0 10px 30px rgba(217,45,32,.18);
+    }
+
+    .btn-primary:hover{
+      background:var(--red-dark);
+    }
+
+    .btn-secondary{
+      color:var(--green);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .btn-green{
+      color:#fff;
+      background:var(--green-2);
+    }
+
+    .btn-green:hover{
+      background:#116a3d;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid rgba(15,81,50,.10);
+      backdrop-filter:blur(18px);
+      box-shadow:0 6px 24px rgba(15,56,34,.035);
+    }
+
+    .nav{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:26px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#111;
+      flex:0 0 auto;
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+    }
+
+    .brand-name{
+      font-size:15px;
+      font-weight:800;
+      letter-spacing:.055em;
+    }
+
+    .brand-sub{
+      margin-top:4px;
+      color:#7a8981;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .logo-mark{
+      width:37px;
+      height:37px;
+      padding:7px 6px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:3px;
+      align-items:end;
+      border:1px solid #dfe8e3;
+      border-radius:10px;
+      background:#fff;
+      box-shadow:0 7px 18px rgba(15,56,34,.06);
+    }
+
+    .logo-mark span{
+      display:block;
+      background:#122d20;
+      border-radius:2px 2px 1px 1px;
+    }
+
+    .logo-mark span:nth-child(1){height:56%;opacity:.45;}
+    .logo-mark span:nth-child(2){height:100%;}
+    .logo-mark span:nth-child(3){height:76%;opacity:.7;}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      color:#47584f;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .nav-links a{
+      position:relative;
+      padding:29px 0 27px;
+      transition:color .2s ease;
+    }
+
+    .nav-links a::after{
+      content:'';
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:20px;
+      height:2px;
+      border-radius:2px;
+      background:var(--green-2);
+      transform:scaleX(0);
+      transition:transform .2s ease;
+    }
+
+    .nav-links a:hover{
+      color:#113824;
+    }
+
+    .nav-links a:hover::after{
+      transform:scaleX(1);
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex:0 0 auto;
+    }
+
+    .mini-link{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      font-size:13px;
+      font-weight:800;
+      color:var(--green);
+      white-space:nowrap;
+      line-height:1.15;
+    }
+
+    .mini-link small{
+      margin-bottom:3px;
+      color:#8a9891;
+      font-size:9px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .header-cta{
+      min-height:44px;
+      padding:0 18px;
+      border-radius:10px;
+      font-size:13px;
+      box-shadow:none;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:94px 0 50px;
+      background:
+        linear-gradient(90deg,rgba(15,81,50,.026) 1px,transparent 1px),
+        linear-gradient(rgba(15,81,50,.026) 1px,transparent 1px),
+        radial-gradient(circle at 7% 18%, rgba(22,131,75,.10), transparent 31%),
+        radial-gradient(circle at 94% 20%, rgba(217,45,32,.055), transparent 25%),
+        linear-gradient(180deg,#fcfefd 0%,#f4f8f6 100%);
+      background-size:42px 42px,42px 42px,auto,auto,auto;
+      border-bottom:1px solid var(--line);
+    }
+
+    .hero::after{
+      content:'';
+      position:absolute;
+      width:420px;
+      height:420px;
+      right:-170px;
+      top:-170px;
+      border:1px solid rgba(15,81,50,.08);
+      border-radius:50%;
+      box-shadow:0 0 0 55px rgba(15,81,50,.018),0 0 0 110px rgba(15,81,50,.012);
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
+      gap:68px;
+      align-items:center;
+    }
+
+    .hero-copy{
+      max-width:760px;
+    }
+
+    .hero-kicker{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:#567066;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+
+    .hero-kicker::before{
+      content:'';
+      width:28px;
+      height:2px;
+      border-radius:4px;
+      background:var(--red);
+    }
+
+    .hero h1{
+      margin-top:18px;
+      max-width:790px;
+      font-size:clamp(42px,5.1vw,66px);
+      line-height:1.015;
+      letter-spacing:-.048em;
+      color:#0b2f1e;
+    }
+
+    .hero h1 span{
+      display:block;
+      margin-top:4px;
+      color:var(--red);
+    }
+
+    .hero .lead{
+      max-width:700px;
+      margin-top:24px;
+      color:#51655b;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    .network-line{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:22px;
+    }
+
+    .network-chip{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:0 11px;
+      border:1px solid #dce7e1;
+      border-radius:999px;
+      background:rgba(255,255,255,.72);
+      color:#365044;
+      font-size:11px;
+      font-weight:800;
+      box-shadow:0 5px 15px rgba(15,56,34,.03);
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
+    }
+
+    .hero-actions .btn{
+      min-height:52px;
+      padding:0 22px;
+    }
+
+    .hero-proof{
+      display:flex;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-top:26px;
+      color:#6f8178;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .hero-proof span{
+      display:flex;
+      align-items:center;
+      gap:7px;
+    }
+
+    .hero-proof span::before{
+      content:'✓';
+      width:18px;
+      height:18px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#e9f5ee;
+      color:var(--green-2);
+      font-size:11px;
+      font-weight:900;
+    }
+
+    .hero-card{
+      position:relative;
+      background:rgba(255,255,255,.96);
+      border:1px solid #dce6e0;
+      border-radius:22px;
+      padding:30px;
+      box-shadow:0 28px 75px rgba(17,55,35,.11);
+    }
+
+    .hero-card::before{
+      content:'';
+      position:absolute;
+      left:30px;
+      top:0;
+      width:62px;
+      height:3px;
+      border-radius:0 0 4px 4px;
+      background:var(--red);
+    }
+
+    .price-kicker{
+      color:#85928c;
+      font-size:10px;
+      font-weight:800;
+      letter-spacing:.11em;
+      text-transform:uppercase;
+    }
+
+    .hero-card h3{
+      color:#103522;
+      font-size:24px;
+      line-height:1.2;
+      margin:7px 0 8px;
+    }
+
+    .price-note{
+      margin-bottom:18px;
+      color:#7a8981;
+      font-size:12px;
+      line-height:1.5;
+    }
+
+    .quick-list{
+      display:grid;
+      gap:0;
+    }
+
+    .quick-item{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      padding:16px 0;
+      border-top:1px solid var(--line);
+    }
+
+    .quick-item:first-child{
+      border-top:none;
+    }
+
+    .quick-item strong{
+      display:block;
+      font-size:14px;
+      color:#183a28;
+    }
+
+    .quick-item small{
+      display:block;
+      margin-top:3px;
+      color:var(--muted);
+      font-size:11px;
+    }
+
+    .quick-price{
+      padding:6px 9px;
+      border-radius:8px;
+      background:#fff5f4;
+      color:var(--red);
+      font-size:13px;
+      font-weight:800;
+      white-space:nowrap;
+    }
+
+    .trust{
+      margin-top:44px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .trust-item{
+      padding:20px;
+      text-align:center;
+      border-right:1px solid var(--line);
+    }
+
+    .trust-item:last-child{
+      border-right:none;
+    }
+
+    .trust-num{
+      font-size:28px;
+      font-weight:800;
+      color:#0f3822;
+    }
+
+    .trust-label{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .service-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      padding:26px;
+      transition:.25s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+    }
+
+    .service-card.featured{
+      border:2px solid #cce8d7;
+      background:linear-gradient(180deg,#ffffff 0%,#f5fbf7 100%);
+    }
+
+    .service-tag{
+      display:inline-flex;
+      align-self:flex-start;
+      padding:5px 9px;
+      border-radius:999px;
+      background:#eef6f1;
+      color:var(--green-2);
+      font-size:11px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.05em;
+    }
+
+    .service-card h3{
+      margin-top:16px;
+      font-size:22px;
+      line-height:1.2;
+      color:#0e3320;
+    }
+
+    .service-card p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .service-price{
+      margin-top:22px;
+      font-size:28px;
+      font-weight:800;
+      color:#122e20;
+    }
+
+    .service-price span{
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .checklist{
+      list-style:none;
+      display:grid;
+      gap:9px;
+      margin:20px 0 24px;
+      color:#43574d;
+      font-size:14px;
+    }
+
+    .checklist li{
+      position:relative;
+      padding-left:22px;
+    }
+
+    .checklist li::before{
+      content:'✓';
+      position:absolute;
+      left:0;
+      top:0;
+      color:var(--green-2);
+      font-weight:900;
+    }
+
+    .service-card .btn{
+      margin-top:auto;
+      width:100%;
+    }
+
+    .all-in{
+      background:#0e3320;
+      color:#fff;
+    }
+
+    .all-in .section-head h2,
+    .all-in .section-head p{
+      color:#fff;
+    }
+
+    .all-in .section-head p{
+      opacity:.78;
+    }
+
+    .allin-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:44px;
+      align-items:start;
+    }
+
+    .allin-card{
+      background:#fff;
+      color:var(--text);
+      border-radius:22px;
+      padding:30px;
+    }
+
+    .allin-card h3{
+      font-size:28px;
+      color:#0d3120;
+      line-height:1.15;
+    }
+
+    .allin-card p{
+      margin-top:12px;
+      color:var(--muted);
+    }
+
+    .allin-price{
+      margin:24px 0;
+      padding:18px;
+      border-radius:14px;
+      background:#f3f8f5;
+    }
+
+    .allin-price small{
+      display:block;
+      color:var(--muted);
+    }
+
+    .allin-price strong{
+      display:block;
+      margin-top:4px;
+      font-size:24px;
+      color:#0e3320;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .step{
+      padding:18px;
+      border-radius:14px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .step-num{
+      font-size:12px;
+      font-weight:800;
+      color:#9edab7;
+    }
+
+    .step h4{
+      margin-top:6px;
+      font-size:16px;
+    }
+
+    .step p{
+      margin-top:5px;
+      color:rgba(255,255,255,.72);
+      font-size:13px;
+    }
+
+    .cases{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+    }
+
+    .case{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+    }
+
+    .case small{
+      color:var(--red);
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    .case h3{
+      margin-top:10px;
+      font-size:24px;
+      color:#123321;
+    }
+
+    .case-block{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:#f5f8f6;
+    }
+
+    .case-block strong{
+      display:block;
+      margin-bottom:5px;
+      color:#153724;
+    }
+
+    .case-result{
+      margin-top:12px;
+      padding:16px;
+      border-radius:12px;
+      background:#eaf6ef;
+      color:#133923;
+      font-weight:700;
+    }
+
+    .why{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .why-card{
+      padding:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+    }
+
+    .why-icon{
+      width:44px;
+      height:44px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:var(--green-soft);
+      font-size:20px;
+    }
+
+    .why-card h3{
+      margin-top:14px;
+      color:#123321;
+      font-size:19px;
+    }
+
+    .why-card p{
+      margin-top:8px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .contact{
+      background:linear-gradient(135deg,#eaf5ef,#dfeee5);
+      border-top:1px solid var(--line);
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:.85fr 1.15fr;
+      gap:36px;
+      align-items:start;
+    }
+
+    .contact-copy h2{
+      margin-top:14px;
+    }
+
+    .contact-copy p{
+      margin-top:14px;
+      color:#566b60;
+      font-size:16px;
+    }
+
+    .contact-box{
+      margin-top:24px;
+      display:grid;
+      gap:10px;
+      font-size:14px;
+      color:#254334;
+    }
+
+    form{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .field{
+      margin-bottom:14px;
+    }
+
+    .field label{
+      display:block;
+      margin-bottom:6px;
+      font-size:13px;
+      font-weight:700;
+      color:#283d32;
+    }
+
+    .field input,
+    .field select,
+    .field textarea{
+      width:100%;
+      padding:12px 13px;
+      border:1px solid #dbe5df;
+      border-radius:10px;
+      outline:none;
+      background:#fff;
+    }
+
+    .field textarea{
+      min-height:110px;
+      resize:vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus{
+      border-color:#78b893;
+      box-shadow:0 0 0 3px rgba(22,131,75,.10);
+    }
+
+    .form-note{
+      margin-top:12px;
+      color:#7a8a82;
+      font-size:12px;
+      text-align:center;
+    }
+
+    footer{
+      background:#fff;
+      border-top:1px solid var(--line);
+      padding:28px 0;
+      color:#6f7f77;
+      font-size:13px;
+    }
+
+    .footer-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .floating-wa{
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:90;
+      width:54px;
+      height:54px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#25d366;
+      color:#fff;
+      font-size:24px;
+      box-shadow:0 12px 30px rgba(37,211,102,.28);
+    }
+
+    @media (max-width:980px){
+      .nav{position:relative;min-height:64px;gap:12px;}
+      .menu-toggle{display:grid;place-items:center;order:3;flex:0 0 44px;width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--green);cursor:pointer}
+      .nav-actions{margin-left:auto}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:12px;background:#fff;border:1px solid var(--line);border-radius:0 0 16px 16px;box-shadow:0 14px 24px rgba(15,56,34,.12);font-size:13px;max-height:70vh;overflow:auto}
+      header.menu-open .nav-links{display:grid}
+      .nav-links a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:8px;background:var(--green-soft);line-height:1.4;overflow-wrap:anywhere}
+      .nav-links a::after{display:none}
+      .nav-links a:focus-visible{outline:2px solid var(--green);outline-offset:-2px}
+      main > section[id]{scroll-margin-top:84px;}
+
+      .hero-grid,
+      .allin-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .services{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .why{
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width:680px){
+      .section{
+        padding:66px 0;
+      }
+
+      .nav{min-height:60px;gap:12px;}
+      .nav-actions{display:none;}
+      .menu-toggle{margin-left:auto;}
+
+      .brand-sub{
+        display:none;
+      }
+
+      .mini-link{
+        display:none;
+      }
+
+      .header-cta{
+        min-height:40px;
+        padding:0 12px;
+        font-size:12px;
+      }
+
+      .hero{
+        padding-top:64px;
+      }
+
+      .hero-grid{
+        gap:34px;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero .lead{
+        font-size:16px;
+      }
+
+      .hero-card{
+        padding:24px 20px;
+      }
+
+      .services,
+      .cases,
+      .steps{
+        grid-template-columns:1fr;
+      }
+
+      .trust{
+        grid-template-columns:1fr;
+      }
+
+      .trust-item{
+        border-right:none;
+        border-bottom:1px solid var(--line);
+      }
+
+      .trust-item:last-child{
+        border-bottom:none;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .hero-actions .btn{
+        width:100%;
+      }
+
+      .nav-actions .btn{
+        padding:0 14px;
+      }
+    }
+    .faq-list{max-width:900px;margin:auto;display:grid;gap:14px;}
+    .faq-item{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 24px;}
+    .faq-item summary{cursor:pointer;font-weight:700;line-height:1.5;}
+    .faq-item p{color:var(--muted);line-height:1.75;margin:16px 0 0;}
+    .upcoming-service{grid-column:1/-1;}
+    .upcoming-service .service-price{font-size:22px;}
+    @media(max-width:640px){.faq-item{padding:18px;}.case h3{overflow-wrap:anywhere;}}
+  </style>
+<style>
+#services .services{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#services .service-card{padding:26px;gap:12px}
+#services .service-card h3,#services .service-card p,#services .service-price{margin-top:0}
+#services .service-card .btn{margin-top:auto}
+.service-dialog{position:fixed;inset:0;margin:auto;width:min(760px,calc(100% - 32px));max-height:88vh;border:1px solid var(--line);border-radius:24px;padding:32px;color:var(--green);background:#fff;box-sizing:border-box;overflow:auto}
+.service-dialog::backdrop{background:rgba(5,32,20,.62)}
+.service-dialog h2{padding-right:30px;margin:0 0 16px;font-size:28px}
+.service-dialog p{line-height:1.65;color:var(--muted);margin:12px 0}
+.dialog-close{position:absolute;right:16px;top:12px;border:0;background:transparent;font-size:32px;cursor:pointer;color:var(--green)}
+.calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.service-dialog .field{margin:16px 0}.calculator-grid .field{margin:0}
+.quote-box{display:grid;gap:8px;background:#f0f8f3;border:1px solid #c4e4d2;border-radius:16px;padding:20px;margin:18px 0}
+.quote-box strong{font-size:28px}.quote-box span,.quote-box div{font-size:14px}
+.service-dialog .btn{margin-top:12px}.promo-status{font-size:13px;min-height:20px}
+@media(max-width:600px){#services .services,.calculator-grid{grid-template-columns:1fr}.service-dialog{padding:24px 18px}.service-dialog h2{font-size:24px}}
+
+.rub-equivalent{display:block;color:var(--muted);font-size:14px;line-height:1.5}.quote-box .rub-equivalent{font-size:22px;font-weight:700;color:var(--green)}.quote-box .rate-note{font-size:12px;line-height:1.6;color:var(--muted)}
+.service-dialog form{padding:0;border:0;box-shadow:none;background:none}.service-dialog h2{margin-top:14px}.service-dialog [hidden]{display:none!important}.service-dialog .field{margin:16px 0}.service-dialog button[type=submit]{width:100%}
+</style>
+  <link rel="stylesheet" href="assets/editorial.css?v=20261014-4">
+  <link rel="stylesheet" href="assets/lumora.css?v=20261014-4">
+  <style id="legal-css">
+    .consent-box{margin:14px 0 16px;display:flex;flex-direction:column;gap:10px}
+    .consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.45;color:var(--muted);cursor:pointer;text-align:left}
+    .consent input{flex:none;width:18px;height:18px;margin-top:1px;accent-color:#16834b;cursor:pointer}
+    .consent a{color:var(--green-2);text-decoration:underline;text-underline-offset:2px}
+    .legal-links{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
+    .legal-links a{color:inherit;opacity:.85;text-decoration:underline;text-underline-offset:2px}
+    #cookie-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:300;max-width:760px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:16px 18px;border-radius:16px;background:#0b1a12;color:#fff;box-shadow:0 18px 50px rgba(0,0,0,.28);font-size:13.5px;line-height:1.5}
+    #cookie-bar[hidden]{display:none}
+    #cookie-bar p{flex:1 1 320px;margin:0;color:rgba(255,255,255,.85)}
+    #cookie-bar a{color:#fff;text-decoration:underline}
+    .ck-btns{display:flex;gap:8px;flex:none}
+    .ck-btns button{min-height:40px;padding:0 18px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;font:inherit;font-weight:600;cursor:pointer}
+    .ck-btns .ck-ok{background:#fff;color:#0b1a12;border-color:#fff}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+  <div id="loader" aria-hidden="true"><div class="ld-brand"><i><b></b><b></b><b></b></i>İSKET GROUP</div><div class="ld-tag">Supplier solutions</div><div class="ld-num" id="ldNum">000</div><div class="ld-bar"><b id="ldFill"></b></div></div>
+  
+
+  <div class="language-bar"><div class="wrap" role="group" aria-label="Language / Язык / Dil"><span class="language-label">RU / TR / EN</span><button type="button" data-language="ru" aria-label="Русский" title="Русский" aria-pressed="true"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#fff" d="M0 0h30v20H0z"/><path fill="#0039a6" d="M0 6.67h30v6.66H0z"/><path fill="#d52b1e" d="M0 13.33h30V20H0z"/></svg></button><button type="button" data-language="tr" aria-label="Türkçe" title="Türkçe" aria-pressed="false"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#e30a17" d="M0 0h30v20H0z"/><circle fill="#fff" cx="12" cy="10" r="5"/><circle fill="#e30a17" cx="13.3" cy="10" r="4"/><path fill="#fff" d="m18.6 6.8.75 2.4h2.5l-2 1.5.75 2.4-2-1.5-2 1.5.75-2.4-2-1.5h2.5z"/></svg></button><button type="button" data-language="en" aria-label="English" title="English" aria-pressed="false"><svg viewBox="0 0 30 20" width="24" height="16" aria-hidden="true"><path fill="#012169" d="M0 0h30v20H0z"/><path stroke="#fff" stroke-width="4" d="m0 0 30 20M30 0 0 20"/><path stroke="#c8102e" stroke-width="1.6" d="m0 0 30 20M30 0 0 20"/><path stroke="#fff" stroke-width="6" d="M15 0v20M0 10h30"/><path stroke="#c8102e" stroke-width="3.5" d="M15 0v20M0 10h30"/></svg></button></div></div>
+  <header>
+    <div class="wrap nav">
+      <a href="index.html" class="brand" aria-label="İSKET GROUP — на главную">
+        <div class="logo-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="brand-copy">
+          <span class="brand-name">İSKET GROUP</span>
+          <span class="brand-sub">Supplier solutions</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-navigation"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+      <nav class="nav-links" id="site-navigation"><a href="index.html">Главная</a><a href="products.html">Специализация</a><a href="services.html" aria-current="page">Услуги и цены</a><a href="cases.html">Кейсы</a><a href="about.html">О компании</a><a href="contact.html">Контакты</a></nav>
+
+      <div class="nav-actions">
+        <a class="mini-link" href="https://wa.me/905306610835" target="_blank" rel="noopener">
+          <small>WhatsApp</small>
+          +90 530 661 08 35
+        </a>
+        <a class="btn btn-primary header-cta" href="contact.html#contact" data-goal="calculate_click">Получить расчёт</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top"><div id="main-content" tabindex="-1"></div>
+<section class="page-head"><div class="wrap"><nav class="crumbs" aria-label="Навигация"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span>Услуги и цены</span></nav><h1>Услуги и цены</h1></div></section>
+<section class="section" id="services"><div class="wrap"><div class="section-head"><span class="eyebrow">Услуги</span><h2>Решения по статусу поставщика.</h2><p>Выберите отдельную задачу или комплексное сопровождение. Цены указаны как ориентиры; состав и стоимость фиксируем после диагностики.</p></div><div class="services"><article class="service-card"><span class="service-tag">Контракты</span><h3>Контракты с торговыми сетями и импорт</h3><p>Сопровождаем договоры с торговыми сетями РФ, работу с АО «Тандер» / «Магнит» и импортные проекты через АО «Тандер» и АО «АРВИАЙ».</p><div class="service-price">от 500 000 ₽</div><p>АО «Тандер», прямой импорт: от 600 000 ₽</p><p>АО «АРВИАЙ»: ориентировочно 3 500–4 000 $</p><small id="import-rub-range" class="rub-equivalent" aria-live="polite">Загружаем курс ЦБ РФ…</small><button type="button" class="btn btn-green" data-open-service="contracts">Рассчитать контракт</button></article>
+<article class="service-card"><span class="service-tag">Документы</span><h3>Документы производителя</h3><p>Помогаем поставщику подготовить пакет документации для подтверждения статуса производителя в любой торговой сети и прохождения предусмотренных ею проверок.</p><div class="service-price">от 250 000 ₽</div><button type="button" class="btn btn-green" data-open-service="documents">Рассчитать и оставить заявку</button></article>
+<article class="service-card"><span class="service-tag">Претензии</span><h3>Штрафы, блокировки и заказы</h3><p>Готовим запросы на перепоставку и снятие заказа, работаем со штрафами, блокировками со стороны сети и ограничениями на вывод средств.</p><small class="service-disclaimer">Окончательное решение принимает торговая сеть. Мы готовим документы и официальные письма, а также сопровождаем переговоры с ритейлом.</small><button type="button" class="btn btn-green" data-open-service="legal">Описать ситуацию</button></article>
+<article class="service-card"><span class="service-tag">Под ключ</span><h3>Комплексное сопровождение</h3><p>Сопровождаем путь от заключения договора с ритейлом до организации поставок продукции на распределительные центры и начала продаж.</p><div class="service-price">Индивидуальный расчёт</div><a class="btn btn-green" href="contact.html#contact" data-service="Комплексное сопровождение под ключ">Получить расчёт проекта</a></article>
+<article class="service-card service-card-kam"><div><span class="service-tag">Команда поставщика</span><h3>KAM и профильные специалисты</h3><p>Подбираем специалистов для работы с торговыми сетями: от сопровождения операционных процессов до развития продаж поставщика.</p></div><button type="button" class="btn btn-green" data-open-service="management">Подробнее о специалистах</button></article></div></div></section>
+<section class="section all-in" id="allin">
+      <div class="wrap">
+        <div class="allin-grid">
+
+          <div>
+            <div class="section-head">
+              <span class="eyebrow">Сопровождение</span>
+              <h2>Этапы сопровождения поставщика</h2>
+              <p>
+                Подходит компаниям, которым нужен не один документ или консультация,
+                а последовательное сопровождение от заключения договора с федеральным ритейлом до запуска и начала полноценной работы.
+              </p>
+            </div>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-num">01</div>
+                <h4>Аудит компании</h4>
+                <p>Анализируем статус компании, исходную документацию и специфику продукции.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">02</div>
+                <h4>Документация</h4>
+                <p>Разрабатываем юридические и технические регламенты, формируем недостающий пакет документов.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">03</div>
+                <h4>Комплаенс</h4>
+                <p>Проверяем готовность предприятия к комплаенсу и выездному аудиту, выявляем пробелы до подачи документов.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">04</div>
+                <h4>Коммерческая часть</h4>
+                <p>Готовим коммерческое предложение и сопровождаем согласование спецификаций в КП с категорийным менеджером торговой сети.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">05</div>
+                <h4>Договор</h4>
+                <p>Сопровождаем акцептование и подписание договора, официальную переписку и правовые вопросы.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">06</div>
+                <h4>Запуск</h4>
+                <p>Сопровождаем получение SAP-кода, активацию тендерного портала и организацию документооборота.</p>
+              </div>
+
+              <div class="step">
+                <div class="step-num">07</div>
+                <h4>Полноценная работа</h4>
+                <p>Приступаем к полноценной работе: сопровождаем первые поставки на распределительные центры, заказы и начало продаж.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="allin-card">
+            <h3>Комплексный выход в торговые сети</h3>
+            <p>
+              Сначала проводим диагностику ситуации. После этого формируем
+              понятный перечень работ, стоимость и план сопровождения.
+            </p>
+
+            <ul class="checklist">
+              <li>единый проект вместо набора разрозненных услуг</li>
+              <li>одна команда сопровождает все этапы</li>
+              <li>понятная последовательность действий</li>
+              <li>фиксация объёма работ в договоре</li>
+            </ul>
+
+            <a href="contact.html#contact" class="btn btn-primary" data-service="Комплексное сопровождение под ключ" data-goal="calculate_click">
+              Получить расчёт проекта
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+<section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head center">
+          <span class="eyebrow"><span class="dot"></span> ответы на вопросы</span>
+          <h2>Оплата, сроки и формат работы</h2>
+          <p>Основные условия обсуждаем после изучения задачи и закрепляем в договоре.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Как устроена оплата услуг?</summary><p>Работаем по договору оказания услуг. Оплата поэтапная; порядок и объём работ фиксируются в договоре. Оплата относится только к нашим услугам по договору.</p></details>
+          <details class="faq-item"><summary>Какие сроки выполнения задач?</summary><p>Подготовка документации — от одной недели, юридический аудит и составление претензий — от двух до пяти дней. Срок конкретной задачи зависит от исходных данных и объёма работ; его согласуем в договоре. Комплексное сопровождение идёт по согласованному графику.</p></details>
+          <details class="faq-item"><summary>Как обеспечиваются качество и конфиденциальность?</summary><p>Юридическую и техническую подготовку документов выполняем в рамках согласованного задания. Условия конфиденциальности и ответственность сторон закрепляются договором. Решения о заключении договора и допуске к торгам принимает торговая сеть.</p></details>
+          <details class="faq-item"><summary>В каком формате вы работаете?</summary><p>Наша деятельность — B2B-консалтинг: помогаем поставщикам привести документацию и процессы в соответствие с требованиями сетей. Работаем на основе договоров и прозрачного документооборота.</p></details>
+          <details class="faq-item"><summary>Работаете ли вы с зарубежными компаниями?</summary><p>Сопровождаем российских и зарубежных поставщиков, включая импортёров и компании из Турции. Формат подготовки зависит от статуса компании, продукции и требований целевой сети.</p></details>
+          <details class="faq-item"><summary>Работаете ли вы с другими федеральными сетями?</summary><p>Направления, по которым мы работаем, перечислены в разделе «Услуги». По другим сетям обсуждаем задачу индивидуально: состав работ зависит от сети, статуса поставщика и поставленной задачи.</p></details>
+        </div>
+      </div>
+    </section>
+<section class="cta-band" aria-label="Связаться"><div class="wrap"><div><span class="eyebrow">Обсудим статус поставщика</span><h2>Опишите задачу.<br>Предложим следующий шаг.</h2></div><a class="btn btn-primary" href="contact.html#contact" data-goal="calculate_click">Получить расчёт <span class="button-arrow" aria-hidden="true">↗</span></a></div></section>
+</main>
+<dialog id="contracts-dialog" class="service-dialog" aria-labelledby="contracts-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Контракты</span><h2 id="contracts-title">Калькулятор стоимости и заявка на сопровождение договора</h2><p>Заполните параметры вашей компании, чтобы узнать ориентировочную стоимость консалтинговых услуг.</p><form id="contractForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="contract"><div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <input type="hidden" name="form_type" value="Заявка на заключение договора с торговыми сетями">
+                
+
+                <div class="field">
+                    <label for="contract_company_name">1. Наименование ООО *</label>
+                    <input type="text" id="contract_company_name" name="company_name" placeholder="ООО «Агро-Стандарт»" required>
+                </div>
+
+                <div class="field">
+                    <label for="supplierCategory">2. Категория поставщика *</label>
+                    <select name="supplier_category" id="supplierCategory" required>
+                        <option value="" disabled selected>Выберите категорию</option>
+                        <option value="Действующий поставщик">2.1 Действующий поставщик</option>
+                        <option value="Недействующий поставщик">2.2 Недействующий поставщик (+200 000 ₽)</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="companyCategory">3. Категория компании *</label>
+                    <select name="company_category" id="companyCategory" required>
+                        <option value="" disabled selected>Выберите статус</option>
+                        <option value="Трейдер">3.1 Трейдер</option>
+                        <option value="Производитель">3.2 Производитель</option>
+                        <option value="Импортер">3.3 Импортер</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="retailTarget">4. Направление сопровождения *</label>
+                    <select name="retail_target" id="retailTarget" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <optgroup label="Торговые сети · ₽"><option value="ТСХ Перекресток">4.1 ТСХ Перекрёсток (от 600 000 ₽)</option>
+                        <option value="ДСК Пятерочка">4.2 ДСК Пятёрочка (от 750 000 ₽)</option>
+                        <option value="ТСЧ Чижик">4.3 ТСЧ Чижик (от 500 000 ₽)</option>
+                        <option value="MAGNIT">4.4 АО «Тандер» / «Магнит» (от 500 000 ₽)</option>
+                        <option value="Все три сети">4.5 Все три сети (от 1 650 000 ₽)</option></optgroup>
+                        <optgroup label="АО «Тандер» · импорт · ₽"><option value="TANDER_DIRECT">АО «Тандер» — прямой импорт (от 600 000 ₽)</option></optgroup>
+                        <optgroup label="АО «АРВИАЙ» · импорт · $"><option value="ARVIAY_DIRECT">АО «АРВИАЙ» — прямой импорт (4 000 $)</option><option value="ARVIAY_TECH">АО «АРВИАЙ» — технический импорт (3 500 $)</option></optgroup>
+                    </select>
+                </div>
+
+                <div class="field" id="contract-role-block">
+                    <label for="entryRole">5. Хотите войти в сеть как: *</label>
+                    <select name="entry_role" id="entryRole" required>
+                        <option value="Как производитель" selected>Как производитель (+200 000 ₽)</option>
+                        <option value="Как трейдер">Как трейдер</option>
+                        <option value="Как импортер">Как импортер</option>
+                        <option value="Без изменений">Без изменений</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="companyAge">Возраст компании (ООО) *</label>
+                    <select name="company_age" id="companyAge" required>
+                        <option value="" disabled selected>Выберите возраст юрлица</option>
+                        <option value="Более 1 года">От 1 года</option>
+                        <option value="Менее 1 года">Менее 1 года (+100 000 ₽ к стоимости)</option>
+                    </select>
+                </div>
+
+                <div id="contract-import-info" hidden><p>Для импортных направлений уточним продукцию, страну поставки и схему работы.</p><div class="field"><label for="contract_product">Продукция *</label><input id="contract_product" name="contract_product" type="text" placeholder="Например, свежие овощи"></div><div class="field"><label for="contract_country">Страна поставки *</label><input id="contract_country" name="contract_country" type="text" placeholder="Например, Турция"></div></div><div class="field">
+                    <label for="contract_sales_region">Регион продаж *</label>
+                    <input type="text" id="contract_sales_region" name="sales_region" placeholder="Например: Москва, Центр, Северо-Запад..." required>
+                </div>
+
+                <div class="field">
+                    <label for="contract_client_phone">Контактный телефон (WhatsApp) *</label>
+                    <input type="tel" id="contract_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                
+                <div class="field"><label for="contract_name">Ваше имя *</label><input id="contract_name" name="contract_name" type="text" required autocomplete="name"></div><div class="field"><label for="contract_email">Email для ответа *</label><input id="contract_email" name="contract_email" type="email" required autocomplete="email"></div><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="contracts-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Ориентировочная стоимость консалтинговых услуг</span><strong id="contracts-total" aria-live="polite">Выберите направление</strong><div id="contracts-rub" class="rub-equivalent" aria-live="polite" hidden></div><div id="currency-rate-info" class="rate-note" hidden></div><div id="contracts-breakdown"></div><input type="hidden" name="calculated_price" id="hiddenPrice"></div><p class="form-note">Объём работ и окончательную стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><div class="consent-box"><label class="consent"><input type="checkbox" name="consent_pd" value="Да" required><span>Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> (в том числе на трансграничную передачу).</span></label><label class="consent"><input type="checkbox" name="consent_policy" value="Да" required><span>Я ознакомился(-ась) с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</span></label><input type="hidden" name="consent_version" value="2026-10-14"></div><button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку на консультацию</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog><dialog id="documents-dialog" class="service-dialog" aria-labelledby="documents-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Документы</span><h2 id="documents-title">Подготовка документации для подтверждения статуса производителя</h2><p>Заполните данные для заказа экспертного пакета документов под требования торговой сети.</p><form id="docsForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="docs"><div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <input type="hidden" name="form_type" value="Заявка на подготовку документации производителя">
+                
+
+                <div class="field">
+                    <label for="docs_company_name">1. Наименование ООО *</label>
+                    <input type="text" id="docs_company_name" name="company_name" placeholder="ООО «Агро-Стандарт»" required>
+                </div>
+
+                <div class="field">
+                    <label for="docs_supplier_status">2. Статус поставщика *</label>
+                    <select name="supplier_status" id="docs_supplier_status" required>
+                        <option value="" disabled selected>Выберите статус</option>
+                        <option value="Действующий поставщик">Действующий поставщик</option>
+                        <option value="Недействующий поставщик">Недействующий поставщик</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="docs_creation_year">3. Год создания компании *</label>
+                    <input type="number" id="docs_creation_year" name="creation_year" placeholder="Например: 2022" min="1900" required>
+                </div>
+
+                <div class="field">
+                    <label for="targetNetworkSelect">4. Для какой сети готовятся документы? *</label>
+                    <select name="target_network" id="targetNetworkSelect" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <option value="ДСК Пятёрочка">ДСК Пятёрочка</option>
+                        <option value="ТСХ Перекрёсток">ТСХ Перекрёсток</option>
+                        <option value="ТСЧ Чижик">ТСЧ Чижик</option>
+                        <option value="Все сети торговые сети">Все сети торговые сети</option>
+                        <option value="АО «Тандер»">АО «Тандер»</option>
+                        <option value="АО «АРВИАЙ»">АО «АРВИАЙ»</option><option value="Впрок">Впрок</option><option value="Другая сеть">Другая сеть</option>
+                    </select>
+                </div>
+
+                <div class="field" id="customNetworkBlock" style="display: none;">
+                    <label for="custom_network_name">Укажите название другой сети *</label>
+                    <input type="text" id="custom_network_name" name="custom_network_name" placeholder="Введите название...">
+                </div>
+
+                <div class="field">
+                    <label for="docs_client_phone">Контактный телефон (WhatsApp) *</label>
+                    <input type="tel" id="docs_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                <div class="field"><label for="docs_name">Ваше имя *</label><input id="docs_name" name="docs_name" type="text" required autocomplete="name"></div><div class="field"><label for="docs_email">Email для ответа *</label><input id="docs_email" name="docs_email" type="email" required autocomplete="email"></div><div class="field"><label for="documents-promo">Промокод</label><input id="documents-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="documents-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Итоговая стоимость услуг</span><strong id="documents-total" aria-live="polite">250 000 ₽</strong><input type="hidden" name="service_price" id="docsPrice"></div><p class="form-note">Состав экспертного пакета и условия работы согласуем после изучения задачи.</p><div class="consent-box"><label class="consent"><input type="checkbox" name="consent_pd" value="Да" required><span>Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> (в том числе на трансграничную передачу).</span></label><label class="consent"><input type="checkbox" name="consent_policy" value="Да" required><span>Я ознакомился(-ась) с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</span></label><input type="hidden" name="consent_version" value="2026-10-14"></div><button type="submit" class="btn btn-primary" style="width: 100%;">Заказать подготовку документации</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog><dialog id="legal-dialog" class="service-dialog" aria-labelledby="legal-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Претензии</span><h2 id="legal-title">Претензионная работа по заказам и штрафам с сетью</h2><p>Заполните параметры проблемного заказа и суть спора для подготовки юридического обращения.</p><form id="orderForm" action="https://formspree.io/f/mkjgeynq" method="POST" data-service-form="order"><div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden"><input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></div>
+                <input type="hidden" name="form_type" value="Претензионная работа / Споры с сетью">
+                
+
+                <div class="field">
+                    <label for="order_number">1. № заказа / претензии *</label>
+                    <input type="text" id="order_number" name="order_number" placeholder="Например: 12345678" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_date">2. Дата заказа / акта *</label>
+                    <input type="date" id="order_date" name="order_date" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_operation">3. Тип операции / процедуры *</label>
+                    <select name="order_operation" id="order_operation" required>
+                        <option value="" disabled selected>Выберите тип процедуры из списка</option>
+                        <option value="Оспаривание штрафов по SL/SLT и недопоставкам">Оспаривание штрафов по SL/SLT и недопоставкам</option>
+                        <option value="Формирование запроса в сеть на снятие блокировки по SL/SLT и по оплатам">Формирование запроса в сеть на снятие блокировки по SL/SLT и по оплатам</option>
+                        <option value="Согласование корректировок заказов и перепоставок">Согласование корректировок заказов и перепоставок</option>
+                        <option value="Досудебное урегулирование претензий ритейла">Досудебное урегулирование претензий ритейла</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="sap_company_number">4. SAP № Компании *</label>
+                    <input type="text" id="sap_company_number" name="sap_company_number" placeholder="Например: 0001234567" required>
+                </div>
+
+                <div class="field">
+                    <label for="retailNetworkSelect">5. Торговая сеть *</label>
+                    <select name="retail_network" id="retailNetworkSelect" required>
+                        <option value="" disabled selected>Выберите сеть</option>
+                        <option value="Перекрёсток">Перекрёсток</option>
+                        <option value="Пятёрочка">Пятёрочка</option>
+                        <option value="Чижик">Чижик</option>
+                        <option value="АО «Тандер» (Магнит)">АО «Тандер» (Магнит)</option>
+                        <option value="АО «АРВИАЙ»">АО «АРВИАЙ»</option><option value="Впрок">Впрок</option><option value="Свой вариант">Свой вариант</option>
+                    </select>
+                </div>
+
+                <div class="field" id="customRetailBlock" style="display: none;">
+                    <label for="custom_retail_name">Укажите название другой сети *</label>
+                    <input type="text" id="custom_retail_name" name="custom_retail_name" placeholder="Введите название...">
+                </div>
+
+                <div class="field">
+                    <label for="order_client_phone">6. Ваши контактные данные (Телефон / WhatsApp) *</label>
+                    <input type="tel" id="order_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
+                </div>
+
+                <div class="field">
+                    <label for="order_comments">7. Суть вопроса / Детали спора</label>
+                    <textarea id="order_comments" name="comments" rows="3" placeholder="Укажите причины разногласий, номера актов или коды позиций..."></textarea>
+                </div>
+
+                <div class="field"><label for="order_company_name">Наименование компании</label><input id="order_company_name" name="order_company_name" type="text" placeholder="ООО «Компания»"></div><div class="field"><label for="order_name">Ваше имя *</label><input id="order_name" name="order_name" type="text" required autocomplete="name"></div><div class="field"><label for="order_email">Email для ответа *</label><input id="order_email" name="order_email" type="email" required autocomplete="email"></div><p class="form-note">Окончательное решение принимает торговая сеть. Мы изучим документы, подготовим официальные письма и предложим план переговоров с ритейлом.</p><div class="consent-box"><label class="consent"><input type="checkbox" name="consent_pd" value="Да" required><span>Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> (в том числе на трансграничную передачу).</span></label><label class="consent"><input type="checkbox" name="consent_policy" value="Да" required><span>Я ознакомился(-ась) с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</span></label><input type="hidden" name="consent_version" value="2026-10-14"></div><button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 5px;">Отправить обращение в работу</button>
+            <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog><dialog id="management-dialog" class="service-dialog" aria-labelledby="management-title"><button type="button" class="dialog-close" data-close-dialog aria-label="Закрыть">×</button><span class="service-tag">Услуги менеджмента</span><h2 id="management-title">Предоставление сотрудников и кадровая поддержка</h2><p>Предоставляем проверенный персонал и профессиональных менеджеров по продажам (KAM) в федеральные сети.</p><button type="button" class="btn btn-primary" data-management-contact>Связаться с нами</button></dialog>
+<footer>
+    <div class="wrap footer-row">
+      <div>© 2026 İSKET GROUP</div><a href="https://www.cbr-xml-daily.ru/" target="_blank" rel="noopener">API для курсов ЦБ РФ</a>
+      <div>Сопровождение поставщиков и B2B-консалтинг</div>
+      <div style="font-size:12px;line-height:1.5;opacity:.85;max-width:760px">İSKET GROUP — торговое обозначение ООО «ТУЛЬСКИЕ ОВОЩИ» (ИНН 9727096157, ОГРН 1247700828781). Юридический адрес: 117042, г. Москва, ул. Южнобутовская, д. 72, помещ. 3/1.</div>
+      <div class="legal-links"><a href="contact.html#request-status">Статус заявки</a><a href="privacy.html">Политика конфиденциальности</a><a href="consent.html">Согласие на обработку персональных данных</a><a href="#" id="cookie-settings">Настройки cookie</a></div>
+      <div style="font-size:12px;line-height:1.5;opacity:.75;max-width:760px">İSKET GROUP — независимая консалтинговая компания, не аффилированная с торговыми сетями (Пятёрочка, Перекрёсток, Чижик), АО «Тандер» и АО «АРВИАЙ». Названия сетей и компаний используются только для описания услуг. Решения о заключении договоров и допуске к торгам принимают торговые сети.</div>
+    </div>
+  </footer>
+
+  <a class="floating-wa"
+     href="https://wa.me/905306610835"
+     target="_blank"
+     rel="noopener"
+     aria-label="Написать в WhatsApp">💬</a>
+
+
+<div id="cookie-bar" role="dialog" aria-label="Cookie" hidden><p>Мы используем файлы cookie и сервис Яндекс.Метрика, чтобы улучшать сайт. Аналитика включается только с вашего согласия. Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.</p><div class="ck-btns"><button type="button" data-cookie="decline">Отклонить</button><button type="button" data-cookie="accept" class="ck-ok">Принять</button></div></div>
+
+
+  
+
+  
+
+
+
+
+
+
+<script src="assets/i18n.js?v=20261014-8"></script>
+<script src="assets/prefill.js?v=20261014-8"></script>
+<script src="assets/goals.js?v=20261014-8"></script>
+<script src="assets/calc.js?v=20261014-8"></script>
+<script src="assets/delivery.js?v=20261014-8"></script>
+<script src="assets/nav.js?v=20261014-8"></script>
+<script src="assets/editorial.js?v=20261014-3"></script>
+<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js" defer></script>
+<script src="assets/lumora.js?v=20261014-8" defer></script>
+<script src="assets/cookie.js?v=20261014-8"></script>
+</body>
+</html>
+
+
