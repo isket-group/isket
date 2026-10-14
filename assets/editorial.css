@@ -32,3 +32,48 @@ footer{padding:45px 0;background:#24281f;color:#c8cbbd;border:0}.footer-row{font
 @media(max-width:640px){.assortment{padding-top:55px}.catalog-grid{grid-template-columns:1fr;gap:23px}.catalog-photo{height:300px}.catalog-description{min-height:0;margin-bottom:20px}.catalog-content{padding:21px 22px 10px}.catalog-title h3{font-size:28px}.format-toolbar{display:block;margin-bottom:23px}.format-toolbar>p{margin-top:13px;font-size:9px}.format-tabs{display:inline-flex}.format-tabs button{font-size:10px;padding:9px 15px}.format-row{grid-template-columns:67px 1fr;gap:12px}.format-row strong{font-size:12px}.format-row p{font-size:10px}.format-label{font-size:9px}.private-label{padding:25px 22px;margin-top:30px}.private-label h3{font-size:25px}.private-label p{font-size:12px}}
 @media(max-width:640px){.products-heading h2{max-width:330px;font-size:32px;overflow-wrap:anywhere}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.product-card:hover img{transform:none}}
+
+/* Supplier-first information architecture */
+.supplier-paths{background:#fffefa;padding-top:95px;padding-bottom:95px}
+.editorial-hero h1 span{white-space:normal;max-width:820px}
+.path-heading{display:grid;grid-template-columns:1fr 2fr;gap:35px;align-items:end}
+.path-heading .eyebrow{grid-column:1}
+.path-heading h2{grid-column:2;margin:0}
+.path-heading p{grid-column:2;max-width:560px}
+.path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.path-card{display:flex;flex-direction:column;min-height:520px;padding:34px;border:1px solid var(--line);border-radius:24px;background:#f0f0e8}
+.path-card-active{background:#263025;color:#f5f3ea;border-color:#263025}
+.path-top{display:flex;justify-content:space-between;gap:20px;align-items:center;padding-bottom:24px;border-bottom:1px solid #cfd1c3}
+.path-card-active .path-top{border-color:#ffffff2e}
+.path-number{display:grid;place-items:center;width:36px;height:36px;border:1px solid currentColor;border-radius:50%;font-size:10px;opacity:.75}
+.path-status{text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--accent)}
+.path-card-active .path-status{color:#d5a17c}
+.path-card h3{max-width:520px;margin-top:34px;font-size:34px;line-height:1.08;letter-spacing:-.05em;font-weight:500}
+.path-card>p{max-width:520px;margin-top:18px;font-size:13px;line-height:1.75;color:var(--muted)}
+.path-card-active>p{color:#c4cbbd}
+.path-card ul{display:grid;gap:11px;margin:25px 0 30px;padding:0;list-style:none;font-size:12px;line-height:1.55}
+.path-card li{position:relative;padding-left:21px}
+.path-card li::before{content:"↗";position:absolute;left:0;color:var(--accent)}
+.path-card-active li::before{color:#d5a17c}
+.path-card .btn{align-self:flex-start;margin-top:auto;min-height:46px;font-size:11px}
+.path-card-active .btn{border-color:#ffffff70;color:#fff}
+.path-card-active .btn:hover{background:#fff;color:#263025}
+.role-note{display:grid;grid-template-columns:150px 1fr;gap:25px;margin-top:28px;padding:25px 30px;border:1px solid var(--line);border-radius:16px;background:#fff}
+.role-note strong{text-transform:uppercase;letter-spacing:.09em;font-size:10px;color:var(--accent)}
+.role-note p{max-width:820px;font-size:12px;line-height:1.7;color:var(--muted)}
+.service-extra{display:flex;align-items:center;justify-content:space-between;gap:35px;margin-top:15px;padding:25px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-extra h3{margin-top:7px;font-size:20px;font-weight:500;letter-spacing:-.035em}
+.service-extra p{margin-top:7px;color:var(--muted);font-size:12px;line-height:1.6}
+.service-extra button{border:0;background:none;cursor:pointer;white-space:nowrap;color:var(--text);font:inherit;font-size:11px}
+
+@media(max-width:980px){
+  .path-heading{display:block}.path-heading h2{margin-top:16px}.path-heading p{margin-top:16px}
+  .path-card{min-height:560px;padding:28px}.path-card h3{font-size:30px}
+}
+@media(max-width:640px){
+  .supplier-paths{padding-top:60px;padding-bottom:60px}
+  .path-grid{grid-template-columns:1fr;gap:16px}
+  .path-card{min-height:0;padding:25px 21px}.path-card h3{font-size:29px;margin-top:27px}.path-card>p{font-size:12px}.path-card ul{font-size:11px;margin-top:22px}.path-card .btn{margin-top:5px}
+  .role-note{grid-template-columns:1fr;gap:9px;padding:21px;margin-top:18px}
+  .service-extra{display:block}.service-extra button{margin-top:18px;white-space:normal;text-align:left}
+}
