@@ -248,3 +248,4 @@ dialog.apply-panel .dialog-close{display:none}
 .apply-general form{max-width:640px}
 .contact-actions{display:flex;gap:26px;align-items:center;flex-wrap:wrap;margin-top:26px}
 .footer-nav a[href="apply.html"]{font-weight:600}
+.status-note{display:block;margin-top:8px}
