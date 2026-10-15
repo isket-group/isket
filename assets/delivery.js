@@ -20,7 +20,7 @@
  if(statusForm)statusForm.addEventListener('submit',async function(e){
   e.preventDefault();if(statusForm.dataset.busy)return;
   var code=document.getElementById('status-code').value.trim().toUpperCase();
-  if(!/^IG-(?:[0-9A-F]{8}-){4}[0-9A-F]{8}$/.test(code)){showStatus('Введите код формата IG-…');return}
+  if(!/^IG-(?:[0-9A-F]{8}-){4}[0-9A-F]{8}$|^IG-[A-Z0-9]{4}-[A-Z0-9]{4}$/.test(code)){showStatus('Введите код формата IG-…');return}
   statusForm.dataset.busy='true';var button=statusForm.querySelector('button');button.disabled=true;showStatus('Проверяем статус…');
   try{var result=await status(code);if(!result.ok)throw Error('Unavailable');showStatus(result.found?(stages[result.stage]||stages.review):'Код не найден. Проверьте символы или свяжитесь с нами.')}
   catch(error){showStatus('Проверка временно недоступна. Попробуйте позже или свяжитесь с нами.')}
