@@ -110,7 +110,7 @@
  $('docs_creation_year').max=String(new Date().getFullYear());
  var mc=document.querySelector('[data-management-contact]');if(mc)mc.addEventListener('click',function(){$('service').value='KAM и специалисты';$('management-dialog').close();location.hash='contact';$('name').focus()});
  var serviceForNetwork={'ТСЧ Чижик':'Выход в Чижик','ТСХ Перекресток':'Выход в Перекрёсток','ДСК Пятерочка':'Выход в Пятёрочку',MAGNIT:'Выход в Магнит / АО «Тандер»','Все три сети':'Выход во все три сети',TANDER_DIRECT:'АО «Тандер» — прямой импорт',ARVIAY_DIRECT:'АО «АРВИАЙ» — прямой импорт',ARVIAY_TECH:'АО «АРВИАЙ» — технический импорт'};
- var crm='https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
+ var crm='https://script.google.com/macros/s/AKfycbyvQ2i_5gXXczZ0a7AIF4gsNZo1p6z3Y0AteYzdYR4pMXh2RaOBsAe8-UK-HPTjtVHtdg/exec';
  document.querySelectorAll('[data-service-form]').forEach(function(form){
    form.addEventListener('submit',function(){
      update();
