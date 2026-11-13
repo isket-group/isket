@@ -1,5 +1,5 @@
 (function(){
- var endpoint='https://script.google.com/macros/s/AKfycby66lxFruVK5vGV_2LhWZNHyz4wVgv-mqA3xrZE59uJMcq8RzjsofvTIJp8lRKa2g9Icg/exec';
+ var endpoint='https://script.google.com/macros/s/AKfycbyvQ2i_5gXXczZ0a7AIF4gsNZo1p6z3Y0AteYzdYR4pMXh2RaOBsAe8-UK-HPTjtVHtdg/exec';
  var t=window.isketTranslate||function(text){return text},states=new WeakMap();
  function randomHex(bytes){var a=new Uint8Array(bytes);crypto.getRandomValues(a);return Array.from(a,function(n){return ('0'+n.toString(16)).slice(-2)}).join('')}
  function newCode(){return 'IG-'+randomHex(20).toUpperCase().match(/.{8}/g).join('-')}
