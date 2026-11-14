@@ -10,7 +10,7 @@
    window[callback]=function(data){finish(null,data)};
    script.onerror=function(){finish(Error('Unavailable'))};
    timer=setTimeout(function(){finish(Error('Timeout'))},20000);
-   script.referrerPolicy='no-referrer';script.src=endpoint+'?action=status&callback='+callback+'&code='+encodeURIComponent(code);
+   script.referrerPolicy='no-referrer';script.crossOrigin='anonymous';script.src=endpoint+'?action=status&callback='+callback+'&code='+encodeURIComponent(code);
    document.head.appendChild(script);
   });
  }
