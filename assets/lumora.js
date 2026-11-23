@@ -32,7 +32,7 @@
       });
     }catch(e){lenis=null}
   }
-  if(window.Lenis)initLenis();else addEventListener('load',initLenis);
+  if(window.Lenis)initLenis();else{addEventListener('lenis-ready',initLenis)}
 
   /* ---------- Заставка ---------- */
   var L=$('#loader');

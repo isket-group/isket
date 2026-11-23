@@ -1,0 +1,2 @@
+/* Onest (SIL OFL 1.1), self-hosted so the site does not depend on Google Fonts (blocked or slow in mainland China). Subset: Latin, Turkish, Cyrillic, punctuation, ₽ € №. */
+@font-face{font-family:'Onest';font-style:normal;font-weight:100 900;font-display:swap;src:url('fonts/onest-subset.woff') format('woff'),url('fonts/onest-subset.ttf') format('truetype')}

@@ -35,11 +35,9 @@
   <meta property="og:title" content="Заявка — İSKET GROUP">
   <meta property="og:description" content="Заявка на сопровождение İSKET GROUP: расчёт стоимости контракта, подготовка документов производителя, претензионная работа, общая заявка. Форма на одной странице.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
+  <link rel="preload" href="assets/fonts/onest-subset.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/fonts.css?v=20261123-1">
+<style>
     .language-bar{background:#fff;border-bottom:1px solid #e4ece7;padding:2px 0}
     .language-bar .wrap{display:flex;justify-content:flex-end;align-items:center;gap:3px}
     .language-label{font-size:11px;color:#64776c;margin-right:5px}
@@ -1232,6 +1230,10 @@
                     <label for="contract_client_phone">Контактный телефон (WhatsApp) *</label>
                     <input type="tel" id="contract_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
                 </div>
+            <div class="field">
+              <label for="contract_wechat">WeChat (необязательно)</label>
+              <input id="contract_wechat" name="wechat" type="text" maxlength="80" placeholder="WeChat ID" autocomplete="off">
+            </div>
 
                 
                 <div class="field"><label for="contract_name">Ваше имя *</label><input id="contract_name" name="contract_name" type="text" required autocomplete="name"></div><div class="field"><label for="contract_email">Email для ответа *</label><input id="contract_email" name="contract_email" type="email" required autocomplete="email"></div><div class="field"><label for="contracts-promo">Промокод</label><input id="contracts-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="contracts-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Ориентировочная стоимость консалтинговых услуг</span><strong id="contracts-total" aria-live="polite">Выберите направление</strong><div id="contracts-rub" class="rub-equivalent" aria-live="polite" hidden></div><div id="currency-rate-info" class="rate-note" hidden></div><div id="contracts-breakdown"></div><input type="hidden" name="calculated_price" id="hiddenPrice"></div><p class="form-note">Объём работ и окончательную стоимость согласуем в договоре. Решение о сотрудничестве принимает торговая сеть.</p><div class="consent-box"><label class="consent"><input type="checkbox" name="consent_pd" value="Да" required><span>Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> (в том числе на трансграничную передачу).</span></label><label class="consent"><input type="checkbox" name="consent_policy" value="Да" required><span>Я ознакомился(-ась) с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</span></label><input type="hidden" name="consent_version" value="2026-10-14"></div><button type="submit" class="btn btn-primary" style="width: 100%;">Отправить заявку на консультацию</button>
@@ -1281,6 +1283,10 @@
                     <label for="docs_client_phone">Контактный телефон (WhatsApp) *</label>
                     <input type="tel" id="docs_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
                 </div>
+            <div class="field">
+              <label for="docs_wechat">WeChat (необязательно)</label>
+              <input id="docs_wechat" name="wechat" type="text" maxlength="80" placeholder="WeChat ID" autocomplete="off">
+            </div>
 
                 <div class="field"><label for="docs_name">Ваше имя *</label><input id="docs_name" name="docs_name" type="text" required autocomplete="name"></div><div class="field"><label for="docs_email">Email для ответа *</label><input id="docs_email" name="docs_email" type="email" required autocomplete="email"></div><div class="field"><label for="documents-promo">Промокод</label><input id="documents-promo" name="promo_code" placeholder="ISKET5" autocomplete="off"><small>ISKET5 — скидка 5% на эту услугу.</small></div><p id="documents-promo-status" class="promo-status" aria-live="polite"></p><div class="quote-box"><span>Итоговая стоимость услуг</span><strong id="documents-total" aria-live="polite">250 000 ₽</strong><input type="hidden" name="service_price" id="docsPrice"></div><p class="form-note">Состав экспертного пакета и условия работы согласуем после изучения задачи.</p><div class="consent-box"><label class="consent"><input type="checkbox" name="consent_pd" value="Да" required><span>Я даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a> (в том числе на трансграничную передачу).</span></label><label class="consent"><input type="checkbox" name="consent_policy" value="Да" required><span>Я ознакомился(-ась) с <a href="privacy.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.</span></label><input type="hidden" name="consent_version" value="2026-10-14"></div><button type="submit" class="btn btn-primary" style="width: 100%;">Заказать подготовку документации</button>
             <input type="hidden" name="request_id"><input type="hidden" name="service"><input type="hidden" name="company"><input type="hidden" name="phone"><input type="hidden" name="message"><p class="form-note">Отправляя форму, вы передаёте контактные данные для связи по вашему запросу.</p></form></dialog>
@@ -1335,6 +1341,10 @@
                     <label for="order_client_phone">6. Ваши контактные данные (Телефон / WhatsApp) *</label>
                     <input type="tel" id="order_client_phone" name="client_phone" placeholder="+7 (999) 000-00-00" required>
                 </div>
+            <div class="field">
+              <label for="order_wechat">WeChat (необязательно)</label>
+              <input id="order_wechat" name="wechat" type="text" maxlength="80" placeholder="WeChat ID" autocomplete="off">
+            </div>
 
                 <div class="field">
                     <label for="order_comments">7. Суть вопроса / Детали спора</label>
@@ -1355,6 +1365,10 @@
             <div class="field">
               <label for="phone">Телефон / WhatsApp *</label>
               <input id="phone" name="phone" type="tel" required placeholder="+7 999 000-00-00">
+            </div>
+            <div class="field">
+              <label for="wechat">WeChat (необязательно)</label>
+              <input id="wechat" name="wechat" type="text" maxlength="80" placeholder="WeChat ID" autocomplete="off">
             </div>
 
             <div class="field">
@@ -1445,8 +1459,8 @@
 
 
 
-<script src="assets/i18n-zh.js?v=20261123-2"></script>
-<script src="assets/i18n.js?v=20261123-2"></script>
+<script src="assets/i18n-zh.js?v=20261123-4"></script>
+<script src="assets/i18n.js?v=20261123-4"></script>
 <script src="assets/prefill.js?v=20261015-2"></script>
 <script src="assets/goals.js?v=20261015-2"></script>
 <script src="assets/calc.js?v=20261114-1"></script>
@@ -1454,8 +1468,8 @@
 <script src="assets/delivery.js?v=20261114-1"></script>
 <script src="assets/nav.js?v=20261123-1"></script>
 <script src="assets/editorial.js?v=20261015-2"></script>
-<script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js" defer></script>
-<script src="assets/lumora.js?v=20261015-2" defer></script>
+<script>addEventListener("load",function(){var s=document.createElement("script");s.src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js";s.async=true;s.onload=function(){dispatchEvent(new Event("lenis-ready"))};document.head.appendChild(s)})</script>
+<script src="assets/lumora.js?v=20261123-1" defer></script>
 <script src="assets/cookie.js?v=20261015-2"></script>
 </body>
 </html>
