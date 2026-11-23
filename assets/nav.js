@@ -1,6 +1,6 @@
 (function(){
   var header=document.querySelector('header'),button=document.querySelector('.menu-toggle'),nav=document.querySelector('.nav-links');
-  function label(){var lang=document.documentElement.lang;var opened=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-label',lang==='tr'?(opened?'Menüyü kapat':'Menüyü aç'):lang==='en'?(opened?'Close menu':'Open menu'):(opened?'Закрыть меню':'Открыть меню'));}
+  function label(){var lang=document.documentElement.lang;var opened=button.getAttribute('aria-expanded')==='true';button.setAttribute('aria-label',lang==='tr'?(opened?'Menüyü kapat':'Menüyü aç'):lang==='zh'?(opened?'关闭菜单':'打开菜单'):lang==='en'?(opened?'Close menu':'Open menu'):(opened?'Закрыть меню':'Открыть меню'));}
   function setOpen(open){header.classList.toggle('menu-open',open);button.setAttribute('aria-expanded',String(open));label();}
   button.addEventListener('click',function(){setOpen(button.getAttribute('aria-expanded')!=='true');});
   nav.addEventListener('click',function(event){if(event.target.closest('a'))setOpen(false);});
